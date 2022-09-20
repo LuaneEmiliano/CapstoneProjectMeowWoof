@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B20B6A628D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6A528D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift */; };
+		6B20B6AA28D9445800E0BE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B20B6A928D9445800E0BE9A /* Assets.xcassets */; };
+		6B20B6AD28D9445800E0BE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B20B6AC28D9445800E0BE9A /* Preview Assets.xcassets */; };
+		6B20B6B528D9446F00E0BE9A /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6B428D9446F00E0BE9A /* PetModel.swift */; };
+		6B20B6B728D9447700E0BE9A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6B628D9447700E0BE9A /* Helpers.swift */; };
+		6B20B6B928D9447C00E0BE9A /* TabInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6B828D9447C00E0BE9A /* TabInfoModel.swift */; };
+		6B20B6BB28D9448200E0BE9A /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6BA28D9448200E0BE9A /* ItemModel.swift */; };
+		6B20B6BD28D9448900E0BE9A /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6BC28D9448900E0BE9A /* ListViewModel.swift */; };
+		6B20B6BF28D9448F00E0BE9A /* PetDiscountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6BE28D9448F00E0BE9A /* PetDiscountModel.swift */; };
+		6B20B6D628D9449900E0BE9A /* PetDiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C128D9449900E0BE9A /* PetDiaryListView.swift */; };
+		6B20B6D728D9449900E0BE9A /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C228D9449900E0BE9A /* TextViews.swift */; };
+		6B20B6D828D9449900E0BE9A /* PetDetailDataIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C328D9449900E0BE9A /* PetDetailDataIconView.swift */; };
+		6B20B6D928D9449900E0BE9A /* PetDetailRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */; };
+		6B20B6DA28D9449900E0BE9A /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */; };
+		6B20B6DB28D9449900E0BE9A /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C628D9449900E0BE9A /* HomeListView.swift */; };
+		6B20B6DC28D9449900E0BE9A /* HealthJournalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C728D9449900E0BE9A /* HealthJournalRowView.swift */; };
+		6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C828D9449900E0BE9A /* PetTabView.swift */; };
+		6B20B6DE28D9449900E0BE9A /* AnimalListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C928D9449900E0BE9A /* AnimalListRowView.swift */; };
+		6B20B6DF28D9449900E0BE9A /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CA28D9449900E0BE9A /* ListRowView.swift */; };
+		6B20B6E028D9449900E0BE9A /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CB28D9449900E0BE9A /* RoundViews.swift */; };
+		6B20B6E128D9449900E0BE9A /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CC28D9449900E0BE9A /* HomeScreenView.swift */; };
+		6B20B6E228D9449900E0BE9A /* HealthJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */; };
+		6B20B6E328D9449900E0BE9A /* NoItemsAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */; };
+		6B20B6E428D9449900E0BE9A /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */; };
+		6B20B6E528D9449900E0BE9A /* PetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D028D9449900E0BE9A /* PetDetailView.swift */; };
+		6B20B6E628D9449900E0BE9A /* MedicalRecordRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */; };
+		6B20B6E728D9449900E0BE9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D228D9449900E0BE9A /* ContentView.swift */; };
+		6B20B6E828D9449900E0BE9A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D328D9449900E0BE9A /* ButtonView.swift */; };
+		6B20B6E928D9449900E0BE9A /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D428D9449900E0BE9A /* TrackerView.swift */; };
+		6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */; };
+		6B20B6EC28D944A200E0BE9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6EB28D944A200E0BE9A /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6B20B6A228D9445600E0BE9A /* CapstoneProjectMeowWoof.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapstoneProjectMeowWoof.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B20B6A528D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapstoneProjectMeowWoofApp.swift; sourceTree = "<group>"; };
+		6B20B6A928D9445800E0BE9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B20B6AC28D9445800E0BE9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B20B6B428D9446F00E0BE9A /* PetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
+		6B20B6B628D9447700E0BE9A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		6B20B6B828D9447C00E0BE9A /* TabInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabInfoModel.swift; sourceTree = "<group>"; };
+		6B20B6BA28D9448200E0BE9A /* ItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		6B20B6BC28D9448900E0BE9A /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		6B20B6BE28D9448F00E0BE9A /* PetDiscountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDiscountModel.swift; sourceTree = "<group>"; };
+		6B20B6C128D9449900E0BE9A /* PetDiaryListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDiaryListView.swift; sourceTree = "<group>"; };
+		6B20B6C228D9449900E0BE9A /* TextViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		6B20B6C328D9449900E0BE9A /* PetDetailDataIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailDataIconView.swift; sourceTree = "<group>"; };
+		6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailRoundedView.swift; sourceTree = "<group>"; };
+		6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
+		6B20B6C628D9449900E0BE9A /* HomeListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
+		6B20B6C728D9449900E0BE9A /* HealthJournalRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthJournalRowView.swift; sourceTree = "<group>"; };
+		6B20B6C828D9449900E0BE9A /* PetTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTabView.swift; sourceTree = "<group>"; };
+		6B20B6C928D9449900E0BE9A /* AnimalListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListRowView.swift; sourceTree = "<group>"; };
+		6B20B6CA28D9449900E0BE9A /* ListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		6B20B6CB28D9449900E0BE9A /* RoundViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		6B20B6CC28D9449900E0BE9A /* HomeScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthJournalView.swift; sourceTree = "<group>"; };
+		6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoItemsAddedView.swift; sourceTree = "<group>"; };
+		6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		6B20B6D028D9449900E0BE9A /* PetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailView.swift; sourceTree = "<group>"; };
+		6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordRowView.swift; sourceTree = "<group>"; };
+		6B20B6D228D9449900E0BE9A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6B20B6D328D9449900E0BE9A /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		6B20B6D428D9449900E0BE9A /* TrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
+		6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordView.swift; sourceTree = "<group>"; };
+		6B20B6EB28D944A200E0BE9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B20B69F28D9445600E0BE9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B20B69928D9445600E0BE9A = {
+			isa = PBXGroup;
+			children = (
+				6B20B6A428D9445600E0BE9A /* CapstoneProjectMeowWoof */,
+				6B20B6A328D9445600E0BE9A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B20B6A328D9445600E0BE9A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6A228D9445600E0BE9A /* CapstoneProjectMeowWoof.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B20B6A428D9445600E0BE9A /* CapstoneProjectMeowWoof */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6A528D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift */,
+				6B20B6EB28D944A200E0BE9A /* Extensions.swift */,
+				6B20B6C028D9449900E0BE9A /* Views */,
+				6B20B6B328D9446600E0BE9A /* Models */,
+				6B20B6A928D9445800E0BE9A /* Assets.xcassets */,
+				6B20B6AB28D9445800E0BE9A /* Preview Content */,
+			);
+			path = CapstoneProjectMeowWoof;
+			sourceTree = "<group>";
+		};
+		6B20B6AB28D9445800E0BE9A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6AC28D9445800E0BE9A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6B20B6B328D9446600E0BE9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6B428D9446F00E0BE9A /* PetModel.swift */,
+				6B20B6B628D9447700E0BE9A /* Helpers.swift */,
+				6B20B6B828D9447C00E0BE9A /* TabInfoModel.swift */,
+				6B20B6BA28D9448200E0BE9A /* ItemModel.swift */,
+				6B20B6BC28D9448900E0BE9A /* ListViewModel.swift */,
+				6B20B6BE28D9448F00E0BE9A /* PetDiscountModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B20B6C028D9449900E0BE9A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6C128D9449900E0BE9A /* PetDiaryListView.swift */,
+				6B20B6C228D9449900E0BE9A /* TextViews.swift */,
+				6B20B6C328D9449900E0BE9A /* PetDetailDataIconView.swift */,
+				6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */,
+				6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */,
+				6B20B6C628D9449900E0BE9A /* HomeListView.swift */,
+				6B20B6C728D9449900E0BE9A /* HealthJournalRowView.swift */,
+				6B20B6C828D9449900E0BE9A /* PetTabView.swift */,
+				6B20B6C928D9449900E0BE9A /* AnimalListRowView.swift */,
+				6B20B6CA28D9449900E0BE9A /* ListRowView.swift */,
+				6B20B6CB28D9449900E0BE9A /* RoundViews.swift */,
+				6B20B6CC28D9449900E0BE9A /* HomeScreenView.swift */,
+				6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */,
+				6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */,
+				6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */,
+				6B20B6D028D9449900E0BE9A /* PetDetailView.swift */,
+				6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */,
+				6B20B6D228D9449900E0BE9A /* ContentView.swift */,
+				6B20B6D328D9449900E0BE9A /* ButtonView.swift */,
+				6B20B6D428D9449900E0BE9A /* TrackerView.swift */,
+				6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B20B6A128D9445600E0BE9A /* CapstoneProjectMeowWoof */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B20B6B028D9445800E0BE9A /* Build configuration list for PBXNativeTarget "CapstoneProjectMeowWoof" */;
+			buildPhases = (
+				6B20B69E28D9445600E0BE9A /* Sources */,
+				6B20B69F28D9445600E0BE9A /* Frameworks */,
+				6B20B6A028D9445600E0BE9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CapstoneProjectMeowWoof;
+			productName = CapstoneProjectMeowWoof;
+			productReference = 6B20B6A228D9445600E0BE9A /* CapstoneProjectMeowWoof.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B20B69A28D9445600E0BE9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					6B20B6A128D9445600E0BE9A = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6B20B69D28D9445600E0BE9A /* Build configuration list for PBXProject "CapstoneProjectMeowWoof" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B20B69928D9445600E0BE9A;
+			productRefGroup = 6B20B6A328D9445600E0BE9A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B20B6A128D9445600E0BE9A /* CapstoneProjectMeowWoof */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B20B6A028D9445600E0BE9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B20B6AD28D9445800E0BE9A /* Preview Assets.xcassets in Resources */,
+				6B20B6AA28D9445800E0BE9A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B20B69E28D9445600E0BE9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B20B6BB28D9448200E0BE9A /* ItemModel.swift in Sources */,
+				6B20B6DB28D9449900E0BE9A /* HomeListView.swift in Sources */,
+				6B20B6B928D9447C00E0BE9A /* TabInfoModel.swift in Sources */,
+				6B20B6D828D9449900E0BE9A /* PetDetailDataIconView.swift in Sources */,
+				6B20B6DC28D9449900E0BE9A /* HealthJournalRowView.swift in Sources */,
+				6B20B6E228D9449900E0BE9A /* HealthJournalView.swift in Sources */,
+				6B20B6BD28D9448900E0BE9A /* ListViewModel.swift in Sources */,
+				6B20B6E028D9449900E0BE9A /* RoundViews.swift in Sources */,
+				6B20B6E828D9449900E0BE9A /* ButtonView.swift in Sources */,
+				6B20B6E128D9449900E0BE9A /* HomeScreenView.swift in Sources */,
+				6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */,
+				6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */,
+				6B20B6E728D9449900E0BE9A /* ContentView.swift in Sources */,
+				6B20B6D728D9449900E0BE9A /* TextViews.swift in Sources */,
+				6B20B6DE28D9449900E0BE9A /* AnimalListRowView.swift in Sources */,
+				6B20B6BF28D9448F00E0BE9A /* PetDiscountModel.swift in Sources */,
+				6B20B6DA28D9449900E0BE9A /* AddNewItemView.swift in Sources */,
+				6B20B6A628D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift in Sources */,
+				6B20B6D628D9449900E0BE9A /* PetDiaryListView.swift in Sources */,
+				6B20B6E628D9449900E0BE9A /* MedicalRecordRowView.swift in Sources */,
+				6B20B6D928D9449900E0BE9A /* PetDetailRoundedView.swift in Sources */,
+				6B20B6B528D9446F00E0BE9A /* PetModel.swift in Sources */,
+				6B20B6E328D9449900E0BE9A /* NoItemsAddedView.swift in Sources */,
+				6B20B6E928D9449900E0BE9A /* TrackerView.swift in Sources */,
+				6B20B6EC28D944A200E0BE9A /* Extensions.swift in Sources */,
+				6B20B6B728D9447700E0BE9A /* Helpers.swift in Sources */,
+				6B20B6E528D9449900E0BE9A /* PetDetailView.swift in Sources */,
+				6B20B6E428D9449900E0BE9A /* AnimalListView.swift in Sources */,
+				6B20B6DF28D9449900E0BE9A /* ListRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6B20B6AE28D9445800E0BE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B20B6AF28D9445800E0BE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B20B6B128D9445800E0BE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CapstoneProjectMeowWoof/Preview Content\"";
+				DEVELOPMENT_TEAM = 33T4V24A4D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codewithluane.swift-demo.CapstoneProjectMeowWoof";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B20B6B228D9445800E0BE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CapstoneProjectMeowWoof/Preview Content\"";
+				DEVELOPMENT_TEAM = 33T4V24A4D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.codewithluane.swift-demo.CapstoneProjectMeowWoof";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B20B69D28D9445600E0BE9A /* Build configuration list for PBXProject "CapstoneProjectMeowWoof" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B20B6AE28D9445800E0BE9A /* Debug */,
+				6B20B6AF28D9445800E0BE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B20B6B028D9445800E0BE9A /* Build configuration list for PBXNativeTarget "CapstoneProjectMeowWoof" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B20B6B128D9445800E0BE9A /* Debug */,
+				6B20B6B228D9445800E0BE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B20B69A28D9445600E0BE9A /* Project object */;
+}
