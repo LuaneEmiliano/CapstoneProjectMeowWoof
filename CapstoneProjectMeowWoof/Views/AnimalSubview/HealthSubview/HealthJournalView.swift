@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HealthJournalView: View {
     var body: some View {
-        
-        ScrollView {
+          ScrollView {
             VStack {
                 Text("Health Journal")
                     .font(.title)
@@ -56,7 +55,7 @@ struct HealthJournalView: View {
                 }
                 Spacer()
             }
-            .navigationBarHidden(true)
+           
         }
     }
 }

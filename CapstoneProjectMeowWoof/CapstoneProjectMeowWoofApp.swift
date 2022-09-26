@@ -15,10 +15,11 @@ struct CapstoneProjectMeowWoofApp: App {
         WindowGroup {
 //                HomeListView()
 //                HomeScreenView()
-             //  PetTabView()
+//         
             PetTabView()
-
-         
+//AddingNameView()
+//    PetTypeView()
+//            PhotoHomeView()
             
 //            .accentColor(.black)
             .environmentObject(listViewModel)

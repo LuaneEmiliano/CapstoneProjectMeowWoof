@@ -12,16 +12,15 @@ struct PetTabView: View {
     @State var selectedTab: Int = 3
     
     var body: some View {
-        
         TabView(selection: $selectedTab) {
             AnimalListView()
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
-                    
                 }
                 .tag(0)
-            HomeScreenView()
+            
+            AnimalListView()
                 .tabItem {
                     Image(systemName: "heart.circle.fill")
                     Text("Tracker")

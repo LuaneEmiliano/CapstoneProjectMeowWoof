@@ -15,8 +15,7 @@ struct PetDetailRoundedView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .fill(Color(color))
-            .frame(width: 170, height: 130)
-            .shadow(color: Color.purple.opacity(0.2), radius: 10, x: 10, y: 10)
+            .frame(width: 370, height: 200)
             .padding(.top, 4)
             .overlay(
                 VStack {

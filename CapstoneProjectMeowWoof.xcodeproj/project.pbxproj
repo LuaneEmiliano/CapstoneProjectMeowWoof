@@ -38,6 +38,15 @@
 		6B20B6E928D9449900E0BE9A /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D428D9449900E0BE9A /* TrackerView.swift */; };
 		6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */; };
 		6B20B6EC28D944A200E0BE9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6EB28D944A200E0BE9A /* Extensions.swift */; };
+		6B6F2E6028DF859000D7363B /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F2E5F28DF859000D7363B /* PetViewModel.swift */; };
+		6B6F2E6728DF8C5F00D7363B /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F2E6628DF8C5F00D7363B /* Singleton.swift */; };
+		6B6F2E8028DF934400D7363B /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F2E7F28DF934400D7363B /* notification.mp3 */; };
+		6B6F2E8228DF937500D7363B /* Ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F2E8128DF937500D7363B /* Ding.mp3 */; };
+		6BFF054628DFA96D0059712A /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF054528DFA96D0059712A /* Iterator.swift */; };
+		6BFF054928DFBA300059712A /* AddingNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF054828DFBA300059712A /* AddingNameView.swift */; };
+		6BFF054B28DFCACF0059712A /* PetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF054A28DFCACF0059712A /* PetTypeView.swift */; };
+		6BFF054D28DFDCE80059712A /* PetTypeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF054C28DFDCE80059712A /* PetTypeRowView.swift */; };
+		6BFF055228E0DB340059712A /* PhotoHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF055128E0DB340059712A /* PhotoHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +82,15 @@
 		6B20B6D428D9449900E0BE9A /* TrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
 		6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordView.swift; sourceTree = "<group>"; };
 		6B20B6EB28D944A200E0BE9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		6B6F2E5F28DF859000D7363B /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
+		6B6F2E6628DF8C5F00D7363B /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		6B6F2E7F28DF934400D7363B /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
+		6B6F2E8128DF937500D7363B /* Ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ding.mp3; sourceTree = "<group>"; };
+		6BFF054528DFA96D0059712A /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		6BFF054828DFBA300059712A /* AddingNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingNameView.swift; sourceTree = "<group>"; };
+		6BFF054A28DFCACF0059712A /* PetTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTypeView.swift; sourceTree = "<group>"; };
+		6BFF054C28DFDCE80059712A /* PetTypeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTypeRowView.swift; sourceTree = "<group>"; };
+		6BFF055128E0DB340059712A /* PhotoHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +124,12 @@
 			isa = PBXGroup;
 			children = (
 				6B20B6A528D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift */,
-				6B20B6EB28D944A200E0BE9A /* Extensions.swift */,
+				6BFF054F28E0A7650059712A /* HomeWork */,
+				6BFF055028E0A86C0059712A /* IteratorDesignPartner */,
+				6B6F2E8328DF970B00D7363B /* SoundEffectDesignPartner */,
+				6B6F2E6828DF907400D7363B /* Sounds */,
+				6B6F2E6128DF880B00D7363B /* Extensions */,
+				6B6F2E5E28DF856700D7363B /* ViewModel */,
 				6B20B6C028D9449900E0BE9A /* Views */,
 				6B20B6B328D9446600E0BE9A /* Models */,
 				6B20B6A928D9445800E0BE9A /* Assets.xcassets */,
@@ -139,29 +162,122 @@
 		6B20B6C028D9449900E0BE9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6B20B6C128D9449900E0BE9A /* PetDiaryListView.swift */,
-				6B20B6C228D9449900E0BE9A /* TextViews.swift */,
-				6B20B6C328D9449900E0BE9A /* PetDetailDataIconView.swift */,
-				6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */,
-				6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */,
-				6B20B6C628D9449900E0BE9A /* HomeListView.swift */,
-				6B20B6C728D9449900E0BE9A /* HealthJournalRowView.swift */,
-				6B20B6C828D9449900E0BE9A /* PetTabView.swift */,
-				6B20B6C928D9449900E0BE9A /* AnimalListRowView.swift */,
-				6B20B6CA28D9449900E0BE9A /* ListRowView.swift */,
-				6B20B6CB28D9449900E0BE9A /* RoundViews.swift */,
-				6B20B6CC28D9449900E0BE9A /* HomeScreenView.swift */,
-				6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */,
-				6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */,
-				6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */,
-				6B20B6D028D9449900E0BE9A /* PetDetailView.swift */,
-				6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */,
-				6B20B6D228D9449900E0BE9A /* ContentView.swift */,
-				6B20B6D328D9449900E0BE9A /* ButtonView.swift */,
-				6B20B6D428D9449900E0BE9A /* TrackerView.swift */,
-				6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */,
+				6BFF054728DFB9FC0059712A /* HomeSubview */,
+				6B6F2E5C28DF465C00D7363B /* TabSubview */,
+				6B6F2E5B28DF45FA00D7363B /* ToDoListSubview */,
+				6B6F2E5928DF453B00D7363B /* HealthSubview */,
+				6B6F2E5628DF446200D7363B /* PetDetailSubview */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6B6F2E5628DF446200D7363B /* PetDetailSubview */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6D028D9449900E0BE9A /* PetDetailView.swift */,
+				6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */,
+				6B20B6C328D9449900E0BE9A /* PetDetailDataIconView.swift */,
+			);
+			path = PetDetailSubview;
+			sourceTree = "<group>";
+		};
+		6B6F2E5928DF453B00D7363B /* HealthSubview */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6C728D9449900E0BE9A /* HealthJournalRowView.swift */,
+				6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */,
+				6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */,
+				6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */,
+			);
+			name = HealthSubview;
+			path = AnimalSubview/HealthSubview;
+			sourceTree = "<group>";
+		};
+		6B6F2E5B28DF45FA00D7363B /* ToDoListSubview */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6C628D9449900E0BE9A /* HomeListView.swift */,
+				6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */,
+				6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */,
+				6B20B6CA28D9449900E0BE9A /* ListRowView.swift */,
+			);
+			path = ToDoListSubview;
+			sourceTree = "<group>";
+		};
+		6B6F2E5C28DF465C00D7363B /* TabSubview */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6C828D9449900E0BE9A /* PetTabView.swift */,
+				6B20B6D428D9449900E0BE9A /* TrackerView.swift */,
+			);
+			path = TabSubview;
+			sourceTree = "<group>";
+		};
+		6B6F2E5E28DF856700D7363B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B6F2E5F28DF859000D7363B /* PetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B6F2E6128DF880B00D7363B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6EB28D944A200E0BE9A /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B6F2E6828DF907400D7363B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6B6F2E7F28DF934400D7363B /* notification.mp3 */,
+				6B6F2E8128DF937500D7363B /* Ding.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		6B6F2E8328DF970B00D7363B /* SoundEffectDesignPartner */ = {
+			isa = PBXGroup;
+			children = (
+				6B6F2E6628DF8C5F00D7363B /* Singleton.swift */,
+			);
+			path = SoundEffectDesignPartner;
+			sourceTree = "<group>";
+		};
+		6BFF054728DFB9FC0059712A /* HomeSubview */ = {
+			isa = PBXGroup;
+			children = (
+				6BFF054828DFBA300059712A /* AddingNameView.swift */,
+				6BFF054A28DFCACF0059712A /* PetTypeView.swift */,
+				6BFF054C28DFDCE80059712A /* PetTypeRowView.swift */,
+				6BFF055128E0DB340059712A /* PhotoHomeView.swift */,
+				6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */,
+				6B20B6C928D9449900E0BE9A /* AnimalListRowView.swift */,
+			);
+			path = HomeSubview;
+			sourceTree = "<group>";
+		};
+		6BFF054F28E0A7650059712A /* HomeWork */ = {
+			isa = PBXGroup;
+			children = (
+				6B20B6D328D9449900E0BE9A /* ButtonView.swift */,
+				6B20B6CC28D9449900E0BE9A /* HomeScreenView.swift */,
+				6B20B6C228D9449900E0BE9A /* TextViews.swift */,
+				6B20B6C128D9449900E0BE9A /* PetDiaryListView.swift */,
+				6B20B6D228D9449900E0BE9A /* ContentView.swift */,
+				6B20B6CB28D9449900E0BE9A /* RoundViews.swift */,
+			);
+			path = HomeWork;
+			sourceTree = "<group>";
+		};
+		6BFF055028E0A86C0059712A /* IteratorDesignPartner */ = {
+			isa = PBXGroup;
+			children = (
+				6BFF054528DFA96D0059712A /* Iterator.swift */,
+			);
+			path = IteratorDesignPartner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6F2E8228DF937500D7363B /* Ding.mp3 in Resources */,
 				6B20B6AD28D9445800E0BE9A /* Preview Assets.xcassets in Resources */,
 				6B20B6AA28D9445800E0BE9A /* Assets.xcassets in Resources */,
+				6B6F2E8028DF934400D7363B /* notification.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,9 +355,12 @@
 				6B20B6BB28D9448200E0BE9A /* ItemModel.swift in Sources */,
 				6B20B6DB28D9449900E0BE9A /* HomeListView.swift in Sources */,
 				6B20B6B928D9447C00E0BE9A /* TabInfoModel.swift in Sources */,
+				6B6F2E6728DF8C5F00D7363B /* Singleton.swift in Sources */,
+				6BFF055228E0DB340059712A /* PhotoHomeView.swift in Sources */,
 				6B20B6D828D9449900E0BE9A /* PetDetailDataIconView.swift in Sources */,
 				6B20B6DC28D9449900E0BE9A /* HealthJournalRowView.swift in Sources */,
 				6B20B6E228D9449900E0BE9A /* HealthJournalView.swift in Sources */,
+				6B6F2E6028DF859000D7363B /* PetViewModel.swift in Sources */,
 				6B20B6BD28D9448900E0BE9A /* ListViewModel.swift in Sources */,
 				6B20B6E028D9449900E0BE9A /* RoundViews.swift in Sources */,
 				6B20B6E828D9449900E0BE9A /* ButtonView.swift in Sources */,
@@ -248,6 +369,7 @@
 				6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */,
 				6B20B6E728D9449900E0BE9A /* ContentView.swift in Sources */,
 				6B20B6D728D9449900E0BE9A /* TextViews.swift in Sources */,
+				6BFF054B28DFCACF0059712A /* PetTypeView.swift in Sources */,
 				6B20B6DE28D9449900E0BE9A /* AnimalListRowView.swift in Sources */,
 				6B20B6BF28D9448F00E0BE9A /* PetDiscountModel.swift in Sources */,
 				6B20B6DA28D9449900E0BE9A /* AddNewItemView.swift in Sources */,
@@ -255,12 +377,15 @@
 				6B20B6D628D9449900E0BE9A /* PetDiaryListView.swift in Sources */,
 				6B20B6E628D9449900E0BE9A /* MedicalRecordRowView.swift in Sources */,
 				6B20B6D928D9449900E0BE9A /* PetDetailRoundedView.swift in Sources */,
+				6BFF054928DFBA300059712A /* AddingNameView.swift in Sources */,
 				6B20B6B528D9446F00E0BE9A /* PetModel.swift in Sources */,
 				6B20B6E328D9449900E0BE9A /* NoItemsAddedView.swift in Sources */,
 				6B20B6E928D9449900E0BE9A /* TrackerView.swift in Sources */,
 				6B20B6EC28D944A200E0BE9A /* Extensions.swift in Sources */,
 				6B20B6B728D9447700E0BE9A /* Helpers.swift in Sources */,
 				6B20B6E528D9449900E0BE9A /* PetDetailView.swift in Sources */,
+				6BFF054D28DFDCE80059712A /* PetTypeRowView.swift in Sources */,
+				6BFF054628DFA96D0059712A /* Iterator.swift in Sources */,
 				6B20B6E428D9449900E0BE9A /* AnimalListView.swift in Sources */,
 				6B20B6DF28D9449900E0BE9A /* ListRowView.swift in Sources */,
 			);

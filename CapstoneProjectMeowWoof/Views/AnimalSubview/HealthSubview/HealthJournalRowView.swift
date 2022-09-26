@@ -23,7 +23,7 @@ struct HealthJournalRowView: View {
             Text(text)
                 .font(.title3)
                 .fontWeight(.regular)
-                .foregroundColor(Color.black)
+                .foregroundColor(Color(icon))
         }
         .shadow(radius: 10)
     }
