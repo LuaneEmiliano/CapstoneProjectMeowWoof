@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>613612389625-55qnni8c62t3j1dn1pd6oqrji5e9sbvg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.613612389625-55qnni8c62t3j1dn1pd6oqrji5e9sbvg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyACVitwuIbuGH6WBkw2kOrZaRy59ASADWM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>613612389625</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.codewithluane.swift-demo.CapstoneProjectMeowWoof</string>
+	<key>PROJECT_ID</key>
+	<string>capstoneprojectmeowwoof</string>
+	<key>STORAGE_BUCKET</key>
+	<string>capstoneprojectmeowwoof.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:613612389625:ios:8fdb991eb9214926604e28</string>
+</dict>
+</plist>

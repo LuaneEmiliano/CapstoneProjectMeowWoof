@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "9248fe561a2a153916fb9597e3af4434784c6d32",
+          "version": "5.13.4"
+        }
+      },
+      {
+        "package": "SDWebImageSwiftUI",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageswiftUI",
+        "state": {
+          "branch": "master",
+          "revision": "ed288667c909c89127ab1b690113a3e397af3098",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
