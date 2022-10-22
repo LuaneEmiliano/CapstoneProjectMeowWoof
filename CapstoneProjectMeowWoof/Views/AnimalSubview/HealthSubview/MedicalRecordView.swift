@@ -10,7 +10,6 @@ import SwiftUI
 struct MedicalRecordView: View {
     var body: some View {
         VStack {
-            
             NavigationLink (
                 destination: Text("Hello"),
                 label: {

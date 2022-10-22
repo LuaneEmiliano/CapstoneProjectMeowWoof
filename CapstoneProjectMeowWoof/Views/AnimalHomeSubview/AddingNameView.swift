@@ -9,8 +9,10 @@ import SwiftUI
 
 struct AddingNameView: View {
     
+    @EnvironmentObject var viewModel: PetViewModel
+    @State var pet: Pet? = nil
     @State var textFieldText: String = ""
-    @State var dataArray: [String] = []
+    @State var nextView: Bool = false
     
     var body: some View {
         NavigationView{
@@ -27,7 +29,8 @@ struct AddingNameView: View {
                     if isTextApropriate() {
                         saveText()
                         // Using Singleton
-                        SoundManager.instance.playSound()
+//                        SoundManager.instance.playSound()
+                        nextView.toggle()
                     }
                 } label: {
                     Text("NEXT")
@@ -38,16 +41,17 @@ struct AddingNameView: View {
                         .foregroundColor(Color.white)
                         .font(.headline)
                 }
-                ForEach(dataArray, id: \.self) { data in
-                    Text(data)
-                }
-                Spacer()
+            }
+            .fullScreenCover(isPresented: $nextView) {
+                PetTypeView(pet: pet)
             }
         }
     }
     
     func saveText() {
-        dataArray.append(textFieldText)
+        pet = Pet(name: textFieldText)
+        viewModel.addPet(pet: pet)
+        viewModel.savePets()
         textFieldText = ""
     }
     

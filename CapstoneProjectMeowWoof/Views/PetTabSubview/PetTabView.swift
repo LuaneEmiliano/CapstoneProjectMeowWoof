@@ -10,7 +10,7 @@ import SwiftUI
 struct PetTabView: View {
     
     @EnvironmentObject var launchScreenManager: LaunchScreenManager
-    @State var selectedTab: Int = 1
+    @State var selectedTab: Int = 0
     
     var body: some View {
         
@@ -34,7 +34,7 @@ struct PetTabView: View {
                     Text("Chat")
                 }
                 .tag(2)
-//            MainMessageView()
+                SettingsView()
                 .tabItem {
                     Image(systemName: "ellipsis.circle.fill")
                     Text("More")

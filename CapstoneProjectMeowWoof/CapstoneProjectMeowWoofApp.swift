@@ -14,6 +14,7 @@ struct CapstoneProjectMeowWoofApp: App {
     @StateObject var launchScreenManager = LaunchScreenManager()
     @StateObject var homework08 = DownloadImageAsyncViewModel()
     let persistenceController = PersistenceController.shared
+    @StateObject var petsViewModel = PetViewModel()
     
     @State private var description: String?
         
@@ -66,12 +67,13 @@ struct CapstoneProjectMeowWoofApp: App {
         WindowGroup {
            ZStack {
                PetTabView()
-
+//               PetInfoListView(pet: nil)
 //                if launchScreenManager.state != .completed {
 //               LaunchScreenView()
 //                }
            }
             .environmentObject(listViewModel)
+            .environmentObject(petsViewModel)
             .environmentObject(launchScreenManager)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
                }

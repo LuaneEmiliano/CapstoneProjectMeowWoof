@@ -22,7 +22,7 @@
 		6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C828D9449900E0BE9A /* PetTabView.swift */; };
 		6B20B6E228D9449900E0BE9A /* HealthJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */; };
 		6B20B6E328D9449900E0BE9A /* NoItemsAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */; };
-		6B20B6E428D9449900E0BE9A /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */; };
+		6B20B6E428D9449900E0BE9A /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CF28D9449900E0BE9A /* PetListView.swift */; };
 		6B20B6E528D9449900E0BE9A /* PetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D028D9449900E0BE9A /* PetDetailView.swift */; };
 		6B20B6E628D9449900E0BE9A /* MedicalRecordRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */; };
 		6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */; };
@@ -42,7 +42,7 @@
 		6B445B3828EA321900CAAA8C /* MainMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B445B3728EA321900CAAA8C /* MainMessageView.swift */; };
 		6B607C6B28E8EA2400C44D55 /* HealthJournalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B607C6A28E8EA2400C44D55 /* HealthJournalRowView.swift */; };
 		6B607C6F28E8EA6200C44D55 /* ToDoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B607C6E28E8EA6200C44D55 /* ToDoListRowView.swift */; };
-		6B607C7128E8EA7C00C44D55 /* AnimalListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B607C7028E8EA7C00C44D55 /* AnimalListRowView.swift */; };
+		6B607C7128E8EA7C00C44D55 /* PetListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B607C7028E8EA7C00C44D55 /* PetListRowView.swift */; };
 		6B6F2E6028DF859000D7363B /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F2E5F28DF859000D7363B /* PetViewModel.swift */; };
 		6B6F2E6728DF8C5F00D7363B /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F2E6628DF8C5F00D7363B /* SoundManager.swift */; };
 		6B6F2E8028DF934400D7363B /* notification.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B6F2E7F28DF934400D7363B /* notification.mp3 */; };
@@ -56,6 +56,12 @@
 		6B8AE40228E8DE33006F2039 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B8AE40128E8DE33006F2039 /* GoogleService-Info.plist */; };
 		6B935E9028F1A48E00D06D73 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B935E8F28F1A48E00D06D73 /* LaunchScreenView.swift */; };
 		6B935E9228F1A8C000D06D73 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B935E9128F1A8C000D06D73 /* LaunchScreenManager.swift */; };
+		6BB9A29A29043F35008945BF /* PetGenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A29929043F35008945BF /* PetGenderView.swift */; };
+		6BB9A29C29044039008945BF /* PetGenderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A29B29044039008945BF /* PetGenderRowView.swift */; };
+		6BB9A29E29044DF1008945BF /* PetInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A29D29044DF1008945BF /* PetInfoListView.swift */; };
+		6BB9A2A029045B65008945BF /* PetFavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A29F29045B65008945BF /* PetFavoritesListView.swift */; };
+		6BB9A2A329047360008945BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A2A229047360008945BF /* SettingsView.swift */; };
+		6BB9A2A52904772E008945BF /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB9A2A42904772E008945BF /* SettingsRowView.swift */; };
 		6BC0536C28F1F1D700436AA6 /* DownloadingImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0536B28F1F1D700436AA6 /* DownloadingImageViewModel.swift */; };
 		6BF06F9D28EB65250030BFAE /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06F9C28EB65240030BFAE /* ChatUser.swift */; };
 		6BF06F9F28EB69690030BFAE /* NewMessageChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06F9E28EB69690030BFAE /* NewMessageChatView.swift */; };
@@ -85,7 +91,7 @@
 		6B20B6C828D9449900E0BE9A /* PetTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTabView.swift; sourceTree = "<group>"; };
 		6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthJournalView.swift; sourceTree = "<group>"; };
 		6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoItemsAddedView.swift; sourceTree = "<group>"; };
-		6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
+		6B20B6CF28D9449900E0BE9A /* PetListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		6B20B6D028D9449900E0BE9A /* PetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailView.swift; sourceTree = "<group>"; };
 		6B20B6D128D9449900E0BE9A /* MedicalRecordRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordRowView.swift; sourceTree = "<group>"; };
 		6B20B6D528D9449900E0BE9A /* MedicalRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordView.swift; sourceTree = "<group>"; };
@@ -104,7 +110,7 @@
 		6B445B3728EA321900CAAA8C /* MainMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageView.swift; sourceTree = "<group>"; };
 		6B607C6A28E8EA2400C44D55 /* HealthJournalRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthJournalRowView.swift; sourceTree = "<group>"; };
 		6B607C6E28E8EA6200C44D55 /* ToDoListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListRowView.swift; sourceTree = "<group>"; };
-		6B607C7028E8EA7C00C44D55 /* AnimalListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalListRowView.swift; sourceTree = "<group>"; };
+		6B607C7028E8EA7C00C44D55 /* PetListRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListRowView.swift; sourceTree = "<group>"; };
 		6B6F2E5F28DF859000D7363B /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		6B6F2E6628DF8C5F00D7363B /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		6B6F2E7F28DF934400D7363B /* notification.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notification.mp3; sourceTree = "<group>"; };
@@ -119,6 +125,12 @@
 		6B935E8D28F19FB400D06D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B935E8F28F1A48E00D06D73 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		6B935E9128F1A8C000D06D73 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
+		6BB9A29929043F35008945BF /* PetGenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGenderView.swift; sourceTree = "<group>"; };
+		6BB9A29B29044039008945BF /* PetGenderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetGenderRowView.swift; sourceTree = "<group>"; };
+		6BB9A29D29044DF1008945BF /* PetInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetInfoListView.swift; sourceTree = "<group>"; };
+		6BB9A29F29045B65008945BF /* PetFavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFavoritesListView.swift; sourceTree = "<group>"; };
+		6BB9A2A229047360008945BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6BB9A2A42904772E008945BF /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		6BC0536B28F1F1D700436AA6 /* DownloadingImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadingImageViewModel.swift; sourceTree = "<group>"; };
 		6BF06F9C28EB65240030BFAE /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		6BF06F9E28EB69690030BFAE /* NewMessageChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageChatView.swift; sourceTree = "<group>"; };
@@ -186,12 +198,11 @@
 		6B20B6B328D9446600E0BE9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6B2150D128FCCDD600CF21C4 /* TheCatModel.swift */,
 				6B20B6B428D9446F00E0BE9A /* PetModel.swift */,
+				6B2150D128FCCDD600CF21C4 /* TheCatModel.swift */,
 				6B20B6B628D9447700E0BE9A /* Helpers.swift */,
 				6B20B6B828D9447C00E0BE9A /* TabInfoModel.swift */,
 				6B20B6BA28D9448200E0BE9A /* ItemModel.swift */,
-				6B20B6BC28D9448900E0BE9A /* ListViewModel.swift */,
 				6B935E9128F1A8C000D06D73 /* LaunchScreenManager.swift */,
 				6B7F15BC28F9E3B200C4140F /* MainMessageModel.swift */,
 				6B7F15C328F9E73400C4140F /* ChatMessageModel.swift */,
@@ -202,6 +213,7 @@
 		6B20B6C028D9449900E0BE9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6BB9A2A12904734B008945BF /* Settings */,
 				6B935E8E28F1A47000D06D73 /* LauchScreenSubView */,
 				6B6F2E5C28DF465C00D7363B /* PetTabSubview */,
 				6B445B2928E8EFC500CAAA8C /* PetLoginSubview */,
@@ -280,8 +292,9 @@
 		6B6F2E5E28DF856700D7363B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				6BC0536B28F1F1D700436AA6 /* DownloadingImageViewModel.swift */,
 				6B6F2E5F28DF859000D7363B /* PetViewModel.swift */,
+				6B20B6BC28D9448900E0BE9A /* ListViewModel.swift */,
+				6BC0536B28F1F1D700436AA6 /* DownloadingImageViewModel.swift */,
 				6BF06FA028EB85600030BFAE /* MainMessagesViewModel.swift */,
 				6B7F15BE28F9E5E500C4140F /* NewMessageChatViewModel.swift */,
 				6B7F15C528F9E7DC00C4140F /* ChatLoginViewModel.swift */,
@@ -349,6 +362,15 @@
 			path = LauchScreenSubView;
 			sourceTree = "<group>";
 		};
+		6BB9A2A12904734B008945BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6BB9A2A229047360008945BF /* SettingsView.swift */,
+				6BB9A2A42904772E008945BF /* SettingsRowView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		6BFF054728DFB9FC0059712A /* AnimalHomeSubview */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,8 +378,12 @@
 				6BFF054A28DFCACF0059712A /* PetTypeView.swift */,
 				6BFF054C28DFDCE80059712A /* PetTypeRowView.swift */,
 				6BFF055128E0DB340059712A /* PhotoHomeView.swift */,
-				6B20B6CF28D9449900E0BE9A /* AnimalListView.swift */,
-				6B607C7028E8EA7C00C44D55 /* AnimalListRowView.swift */,
+				6B20B6CF28D9449900E0BE9A /* PetListView.swift */,
+				6B607C7028E8EA7C00C44D55 /* PetListRowView.swift */,
+				6BB9A29929043F35008945BF /* PetGenderView.swift */,
+				6BB9A29B29044039008945BF /* PetGenderRowView.swift */,
+				6BB9A29D29044DF1008945BF /* PetInfoListView.swift */,
+				6BB9A29F29045B65008945BF /* PetFavoritesListView.swift */,
 			);
 			path = AnimalHomeSubview;
 			sourceTree = "<group>";
@@ -472,18 +498,21 @@
 				6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */,
 				6B2150CE28FCCDB600CF21C4 /* TheCatFileManagerViewModel.swift in Sources */,
 				6B7F15C228F9E6D400C4140F /* FirebaseConstants.swift in Sources */,
+				6BB9A2A029045B65008945BF /* PetFavoritesListView.swift in Sources */,
 				6B2150D028FCCDCD00CF21C4 /* DownloadAsyncManager.swift in Sources */,
 				6BFF054B28DFCACF0059712A /* PetTypeView.swift in Sources */,
 				6BC0536C28F1F1D700436AA6 /* DownloadingImageViewModel.swift in Sources */,
 				6B20B6DA28D9449900E0BE9A /* AddNewItemView.swift in Sources */,
 				6B2150CA28FCCD9C00CF21C4 /* TheCatView.swift in Sources */,
-				6B607C7128E8EA7C00C44D55 /* AnimalListRowView.swift in Sources */,
+				6B607C7128E8EA7C00C44D55 /* PetListRowView.swift in Sources */,
+				6BB9A29A29043F35008945BF /* PetGenderView.swift in Sources */,
 				6B7F15C628F9E7DC00C4140F /* ChatLoginViewModel.swift in Sources */,
 				6B20B6A628D9445600E0BE9A /* CapstoneProjectMeowWoofApp.swift in Sources */,
 				6B20B6E628D9449900E0BE9A /* MedicalRecordRowView.swift in Sources */,
 				6B20B6D928D9449900E0BE9A /* PetDetailRoundedView.swift in Sources */,
 				6B7F15BF28F9E5E500C4140F /* NewMessageChatViewModel.swift in Sources */,
 				6BFF054928DFBA300059712A /* AddingNameView.swift in Sources */,
+				6BB9A29E29044DF1008945BF /* PetInfoListView.swift in Sources */,
 				6BF06F9D28EB65250030BFAE /* ChatUser.swift in Sources */,
 				6B2150DA28FCCE0000CF21C4 /* Persistence.swift in Sources */,
 				6B20B6B528D9446F00E0BE9A /* PetModel.swift in Sources */,
@@ -493,14 +522,17 @@
 				6B20B6EC28D944A200E0BE9A /* Extensions.swift in Sources */,
 				6B2150D928FCCE0000CF21C4 /* TheCat+CoreDataClass.swift in Sources */,
 				6B2150DB28FCCE0000CF21C4 /* TheCat+CoreDataProperties.swift in Sources */,
+				6BB9A2A329047360008945BF /* SettingsView.swift in Sources */,
 				6B20B6B728D9447700E0BE9A /* Helpers.swift in Sources */,
 				6B2150CD28FCCDB600CF21C4 /* TheCatDownloadAsyncViewModel.swift in Sources */,
 				6B20B6E528D9449900E0BE9A /* PetDetailView.swift in Sources */,
 				6BFF054D28DFDCE80059712A /* PetTypeRowView.swift in Sources */,
 				6B8AE3F928E88721006F2039 /* CreateAccountView.swift in Sources */,
+				6BB9A29C29044039008945BF /* PetGenderRowView.swift in Sources */,
 				6B445B3828EA321900CAAA8C /* MainMessageView.swift in Sources */,
 				6BFF054628DFA96D0059712A /* Iterator.swift in Sources */,
-				6B20B6E428D9449900E0BE9A /* AnimalListView.swift in Sources */,
+				6BB9A2A52904772E008945BF /* SettingsRowView.swift in Sources */,
+				6B20B6E428D9449900E0BE9A /* PetListView.swift in Sources */,
 				6B7F15C428F9E73400C4140F /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

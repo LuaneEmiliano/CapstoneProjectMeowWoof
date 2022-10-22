@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PetTypeView: View {
  
+    @EnvironmentObject var viewModel: PetViewModel
+    let pet: Pet?
     @State var petsBirthday = Date()
     @State var petOptions: String = ""
     @State var button: Bool = false
@@ -18,7 +20,9 @@ struct PetTypeView: View {
     var body: some View {
     
         VStack {
-                        
+            
+            Spacer()
+            
             DatePicker("Pet's Birthday🎉", selection: $petsBirthday, displayedComponents: [.date])
                 .datePickerStyle(.compact)
                 .font(.headline)
@@ -48,11 +52,18 @@ struct PetTypeView: View {
                     }
                 }
             }
+            Spacer()
+            Spacer()
             Button {
+                if let pet = pet {
+                    viewModel.updatePetInfo(id: pet.id, birthDay: petsBirthday, typeOfAnimal: petOptions)
+                }
+                viewModel.savePets()
                 button.toggle()
+                
             } label: {
                 Text("Next")
-                    .padding(.horizontal, 157)
+                    .frame(maxWidth: .infinity)
                     .padding(.vertical, 15)
                     .background(Color("ButtonColor"))
                     .foregroundColor(.white)
@@ -60,9 +71,9 @@ struct PetTypeView: View {
                     .font(.headline)
                     
             }
-            .padding(.top, 400)
-            Spacer()
-                
+            .fullScreenCover(isPresented: $button) {
+                PetGenderView(pet: pet)
+            }
         }
         .padding(.all, 15)
     }
@@ -72,6 +83,6 @@ struct PetTypeView: View {
 
 struct PetTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        PetTypeView()
+        PetTypeView(pet: Pet(name: "Stella"))
     }
 }

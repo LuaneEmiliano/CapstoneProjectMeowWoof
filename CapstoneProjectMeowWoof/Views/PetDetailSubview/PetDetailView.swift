@@ -32,9 +32,16 @@ struct PetDetailView: View {
                 .frame(width: 370, height: 130, alignment:.center)
                 .overlay(
                     HStack (spacing: 30){
-                        PetDetailDataIconView(data: pet.breed, icon: "pawprint")
-                        PetDetailDataIconView(data: "\(pet.birthDay.shortFormat)", icon: "gift")
-                        PetDetailDataIconView(data: pet.gender, icon: "arrow.triangle.branch")
+                        if let breed = pet.breed {
+                        PetDetailDataIconView(data: breed, icon: "pawprint")
+                        }
+                        if let birthday = pet.birthDay {
+                        PetDetailDataIconView(data: "\(birthday.shortFormat)", icon: "gift")
+                        }
+                        
+                        if let gender = pet.gender {
+                            PetDetailDataIconView(data: gender, icon: "arrow.triangle.branch")                       
+                        }
                     }
                 )
             HStack {
@@ -63,9 +70,9 @@ struct PetDetailView: View {
 
 struct RoundedRectangleView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDetailView(pet: listOfPets[0])
+        PetDetailView(pet: Pet(name: "Luna", age: 7, birthDay: Date(), weight: 20, gender: "Female",  breed: "Golden Retriever", favoriteToys: ["ball"], typeOfAnimal: "dog", color: "PetAlbum"))
             .previewInterfaceOrientation(.portrait)
-        PetDetailView(pet: listOfPets[0])
+        PetDetailView(pet: Pet(name: "Luna", age: 7, birthDay: Date(), weight: 20, gender: "Female",  breed: "Golden Retriever", favoriteToys: ["ball"], typeOfAnimal: "dog", color: "PetAlbum"))
             .preferredColorScheme(.dark)
             .previewLayout(.fixed(width: 568, height: 320))
     }

@@ -32,6 +32,6 @@ struct AnimalListRowView: View {
 
 struct AnimalListRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalListRowView(pet: listOfPets[0], image: "Dog", icon: "PetAlbum")
+        AnimalListRowView(pet: Pet(name: "Luna", age: 7, birthDay: Date(), weight: 20, gender: "Female",  breed: "Golden Retriever", favoriteToys: ["ball"], typeOfAnimal: "dog", color: "PetAlbum"), image: "Dog", icon: "PetAlbum")
     }
 }

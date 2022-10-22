@@ -29,6 +29,6 @@ struct PetDetailDataIconView: View {
 
 struct PetDetailDataIconView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDetailDataIconView(data: listOfPets[0].breed, icon: "pawprint")
+        PetDetailDataIconView(data: Pet(name: "Luna", age: 7, birthDay: Date(), weight: 20, gender: "Female",  breed: "Golden Retriever", favoriteToys: ["ball"], typeOfAnimal: "dog", color: "PetAlbum").breed ?? "", icon: "pawprint")
     }
 }
