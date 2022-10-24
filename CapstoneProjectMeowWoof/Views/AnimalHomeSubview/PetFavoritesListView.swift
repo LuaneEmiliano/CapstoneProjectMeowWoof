@@ -60,6 +60,7 @@ struct PetFavoritesListView: View {
                     .background(Color("ButtonColor"))
                     .cornerRadius(10)
             }
+            .accessibilityIdentifier("SaveAndGoToDetailView")
         }
         .padding()
         .fullScreenCover(isPresented: $nextView) {
