@@ -32,6 +32,36 @@ class PetViewModel: ObservableObject {
         self.pets = savedPets
     }
     
+    func addFeedTimeToPet(pet: Pet, time: Date) {
+        
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.feedTimes.append(time)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func addPottyTimesToPet(pet: Pet, time: Date) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.pottyTimes.append(time)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
     func updatePetInfo(
         id: String,
         birthDay: Date? = nil,
@@ -92,12 +122,9 @@ class PetViewModel: ObservableObject {
             }
         }
     
-    
-    
-    
     func addPet(pet: Pet?) {
         if let pet = pet {
-            pets.append(pet)            
+            pets.append(pet)
         }
     }
     

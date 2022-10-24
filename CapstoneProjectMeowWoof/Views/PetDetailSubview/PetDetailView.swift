@@ -52,7 +52,7 @@ struct PetDetailView: View {
                         PetDetailRoundedView(color: "MedicalRecords", text: "Medical Record", icon: "Checklist")
                     }
                     NavigationLink {
-                        HealthJournalView()
+                        HealthJournalView(pet: pet)
                     } label: {
                         PetDetailRoundedView(color: "Detailed", text: "Health Journal", icon: "Journal")
                     }

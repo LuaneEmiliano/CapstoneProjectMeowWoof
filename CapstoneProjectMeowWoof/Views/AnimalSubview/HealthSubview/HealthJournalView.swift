@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HealthJournalView: View {
+    
+    let pet: Pet
+    
     var body: some View {
           ScrollView {
             VStack {
@@ -23,12 +26,12 @@ struct HealthJournalView: View {
                     .padding()
                 LazyVGrid(columns: [.init(), .init()]) {
                     NavigationLink {
-                        Text("Feed Times Page")
+                        FeedTimesView(pet: pet)
                     } label: {
                         HealthJournalRowView(icon: "MedicalRecords", text: "Feed Times", image: "bowl")
                     }
                     NavigationLink {
-                        Text("Potty Times page")
+                       PottyTimesView(pet: pet)
                     } label: {
                         HealthJournalRowView(icon: "PetAlbum", text: "Potty Times", image: "Potty")
                     }
@@ -62,6 +65,6 @@ struct HealthJournalView: View {
 
 struct HealthJournalView_Previews: PreviewProvider {
     static var previews: some View {
-        HealthJournalView()
+        HealthJournalView(pet: Pet(name: "Luna"))
     }
 }
