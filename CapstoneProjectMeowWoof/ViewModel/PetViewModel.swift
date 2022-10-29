@@ -15,13 +15,17 @@ import Foundation
 
 class PetViewModel: ObservableObject {
     
-    @Published var pets: [Pet] = []
+    @Published var pets: [Pet] = [] {
+        didSet {
+            savePets()
+        }
+    }
     
+    let petKey: String = "pets"
     init() {
         getPets()
     }
     
-    let petKey: String = "pets"
     
     func getPets() {
         guard
@@ -62,6 +66,44 @@ class PetViewModel: ObservableObject {
             }
         }
     }
+    
+    func addWalkingTimesToPet(pet: Pet, time: Date) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.walkingTimes.append(time)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func addTrainingToPet(pet: Pet, training: Training) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.training.append(training)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func addCareNotesToPet(pet: Pet, careNotes: String ) {
+        guard
+            let data = UserDefaults.standard.data(forKey: petKey),
+         let savePets = try? JSONDecoder().decode([Pet].self, from: data) else { return }
+        self.pets = savePets
+    }
+    
     func updatePetInfo(
         id: String,
         birthDay: Date? = nil,
@@ -125,6 +167,66 @@ class PetViewModel: ObservableObject {
     func addPet(pet: Pet?) {
         if let pet = pet {
             pets.append(pet)
+        }
+    }
+    
+    func savePetImage(pet: Pet, id: String) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.petPhotos.append(id)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func saveInsuranceImage(pet: Pet, id: String) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.petInsuranceDocuments.append(id)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func saveMedicalDocumentsImage(pet: Pet, id: String) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.petMedicalRecords.append(id)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
+        }
+    }
+    
+    func saveVaccinationDocumentsImage(pet: Pet, id: String) {
+        let pet = pets.first(where: { $0.id == pet.id } )
+        guard var pet = pet else { return }
+        
+        pet.petVaccinationRecords.append(id)
+        
+        for index in 0..<pets.count {
+            if pet.id == pets[index].id {
+                pets[index] = pet
+                print(pets[index])
+                break
+            }
         }
     }
     

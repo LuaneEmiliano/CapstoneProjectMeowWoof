@@ -14,7 +14,6 @@ struct FeedTimesView: View {
     var body: some View {
         VStack {
             ScrollView {
-                
                 ForEach(pet.feedTimes, id: \.self ) { feedTime in
                     Text(feedTime.dayAndTimeText)
                         .font(.title2)
@@ -32,7 +31,7 @@ struct FeedTimesView: View {
                     .frame(height: 20)
                     .foregroundColor(.black)
                     .padding()
-                    .background(Color("MedicalRecords"))
+                    .background(Color.medicalRecordsColor)
                     .cornerRadius(10)
                     .padding()
             }

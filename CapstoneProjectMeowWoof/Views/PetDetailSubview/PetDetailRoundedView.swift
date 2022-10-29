@@ -34,6 +34,6 @@ struct PetDetailRoundedView: View {
 
 struct PetDetailRoundedView_Previews: PreviewProvider {
     static var previews: some View {
-        PetDetailRoundedView(color: "MedicalRecords", text: "Medical Records", icon: "Checklist")
+        PetDetailRoundedView(color: "MedicalRecordsColor", text: "Medical Records", icon: "Checklist")
     }
 }

@@ -36,7 +36,7 @@ struct AddingNameView: View {
                     Text("NEXT")
                         .padding(.horizontal, 157)
                         .padding(.vertical, 15)
-                        .background(isTextApropriate() ? Color("ButtonColor") : Color.gray)
+                        .background(isTextApropriate() ? Color.buttonColor : Color.gray)
                         .cornerRadius(10)
                         .foregroundColor(Color.white)
                         .font(.headline)

@@ -13,9 +13,9 @@ struct SettingsView: View {
             VStack{
                 Spacer()
                 NavigationLink (
-                    destination: Text("Change Password"),
+                    destination: Text("Reset Password"),
                     label: {
-                        SettingsRowView(icon: "ChangePassword", title: "Change Password")
+                        SettingsRowView(icon: "ChangePassword", title: "Reset Password")
                     })
                 NavigationLink (
                     destination: Text("Change Email"),
@@ -34,10 +34,11 @@ struct SettingsView: View {
                     
                 } label: {
                     Text("SIGN OUT")
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 40)
+                        .foregroundColor(.black)
                         .padding()
-                        .font(.headline)
-                        .background(.red)
-                        .foregroundColor(.white)
+                        .background(Color.healthJournalColor)
                         .cornerRadius(10)
                         .padding()
                 }

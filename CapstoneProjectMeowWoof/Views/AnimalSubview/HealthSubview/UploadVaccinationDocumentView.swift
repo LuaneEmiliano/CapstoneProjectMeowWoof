@@ -1,18 +1,20 @@
 //
-//  PhotoHomeView.swift
+//  UploadVaccinationDocumentView.swift
 //  CapstoneProjectMeowWoof
 //
-//  Created by luane Niejelski on 9/25/22.
+//  Created by luane Niejelski on 10/28/22.
 //
 
 import SwiftUI
 
-struct PhotoHomeView: View {
+struct UploadVaccinationDocumentView: View {
     @State var shouldShowImagePicker = false
-    @State var image: UIImage?
+    @State var image: UIImage? = nil
+    @State var imageFullScreen: UIImage?
     let pet: Pet
     let columns = [GridItem(.adaptive(minimum: 100))]
     @EnvironmentObject var viewModel: PetViewModel
+    @State var sheetImage: Bool = false
     
     var body: some View {
         ZStack {
@@ -31,18 +33,21 @@ struct PhotoHomeView: View {
                             }
                         }
                     }
-                    Spacer()
-                    
                     VStack {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(pet.petPhotos, id: \.self) { photoString in
-                                if let uiImage = PhotoModelFileManager.instance.get(key: photoString) {
+                            ForEach(pet.petVaccinationRecords, id: \.self) { petVaccinationRecord in
+                                if let uiImage = PhotoModelFileManager.instance.get(key: petVaccinationRecord ){
                                     Image(uiImage: uiImage)
                                         .resizable()
                                         .aspectRatio( contentMode: .fill)
                                         .frame(width: 115 , height: 115)
                                         .cornerRadius(12)
+                                        .onTapGesture {
+                                            imageFullScreen = uiImage
+                                            sheetImage.toggle()
+                                        }
                                 }
+                                
                             }
                         }
                     }
@@ -55,22 +60,26 @@ struct PhotoHomeView: View {
                             if let image = image {
                                 PhotoModelFileManager.instance.add(key: id, value: image)
                             }
-                            viewModel.savePetImage(pet: pet, id: id)
+                            viewModel.saveVaccinationDocumentsImage(pet: pet, id: id)
                             viewModel.savePets()
                         }
                 }
                 .fullScreenCover(isPresented: $shouldShowImagePicker) {
                     ImagePicker(image: $image)
                 }
+                .sheet(isPresented: $sheetImage) {
+                    if let image = imageFullScreen {
+                        FullScreenImageView(image: image)
+                    }
+                }
             }
-            .navigationTitle("Pet Album")
+            .navigationTitle("Vaccination Record 💉")
         }
     }
 }
 
-struct PhotoHomeView_Previews: PreviewProvider {
+struct UploadVaccinationDocumentView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoHomeView(pet: Pet(name: "Luna"))
-            .preferredColorScheme(.light)
+        UploadVaccinationDocumentView(pet: Pet(name: "Luna"))
     }
 }

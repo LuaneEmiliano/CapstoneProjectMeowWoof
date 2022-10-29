@@ -16,12 +16,12 @@ struct PetDetailDataIconView: View {
         VStack(spacing: 30) {
             Text(data)
                 .fontWeight(.bold)
-                .foregroundColor(Color("ButtonColor"))
+                .foregroundColor(Color.buttonColor)
                 .font(.headline)
                 .lineLimit(2)
                 .frame(width: 80)
             Image(systemName: icon)
-                .foregroundColor(Color("ButtonColor"))
+                .foregroundColor(Color.buttonColor)
                 .font(.title)
         }
     }

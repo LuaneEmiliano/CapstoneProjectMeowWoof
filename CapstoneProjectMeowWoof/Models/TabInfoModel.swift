@@ -13,8 +13,8 @@ struct TabInfoModel: Identifiable {
     var color: String
 }
 
-var tabInfoList = [TabInfoModel(name: "MedicalRecord", color: "MedicalRecords"),
-                   TabInfoModel(name: "HealthJournal",color: "HealthJournal"),
+var tabInfoList = [TabInfoModel(name: "MedicalRecord", color: "MedicalRecordsColor"),
+                   TabInfoModel(name: "HealthJournal",color: "HealthJournalColor"),
                    TabInfoModel(name: "CareNotes", color: "CareNotes"),
                    TabInfoModel(name: "PetAlbum",color: "PetAlbum")]
 

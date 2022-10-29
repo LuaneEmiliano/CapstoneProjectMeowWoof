@@ -21,15 +21,21 @@ struct Pet: Identifiable, Codable {
     var typeOfAnimal: String?
     var color: String?
     var petImages: [String] = []
-    var vaccinationRecords: [String] = []
-    var medicalRecords: [String] = []
-    var insurance: [String] = []
-    var careNotes: [String] = []
+    var petVaccinationRecords: [String] = []
+    var petMedicalRecords: [String] = []
+    var petInsuranceDocuments: [String] = []
+    var careNotes: String = ""
     var feedTimes: [Date] = []
     var pottyTimes: [Date] = []
     var supplements: [String] = []
-    var socialize: [String] = []
-    var training: [String] = []
-    var checklist: [String] = []
+    var walkingTimes: [Date] = []
+    var training: [Training] = []
+    var petPhotos: [String] = []
     
+}
+
+struct Training: Identifiable, Codable {
+    var id: String = UUID().uuidString
+    var name: String
+    var date: Date
 }

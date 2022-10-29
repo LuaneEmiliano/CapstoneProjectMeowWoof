@@ -17,8 +17,8 @@ struct HealthJournalView: View {
                 Text("Health Journal")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundColor(Color("ButtonColor"))
-                    .padding(.top)
+                    .foregroundColor(Color.buttonColor)
+                    .padding(.top,40)
                 Image("Health")
                     .resizable()
                     .frame(width: 380, height: 250)
@@ -28,33 +28,25 @@ struct HealthJournalView: View {
                     NavigationLink {
                         FeedTimesView(pet: pet)
                     } label: {
-                        HealthJournalRowView(icon: "MedicalRecords", text: "Feed Times", image: "bowl")
+                        HealthJournalRowView(icon: "MedicalRecordsColor", text: "Feed Times", image: "bowl")
                     }
                     NavigationLink {
                        PottyTimesView(pet: pet)
                     } label: {
                         HealthJournalRowView(icon: "PetAlbum", text: "Potty Times", image: "Potty")
                     }
+                
                     NavigationLink {
-                        Text("Supplements Page")
+                        TrainingView(pet: pet)
                     } label: {
-                        HealthJournalRowView(icon: "CareNotes", text: "Supplements", image: "Supplements")
+                        HealthJournalRowView(icon: "LightBlueColor", text: "Training", image: "Training")
                     }
                     NavigationLink {
-                        Text("Training Page")
+                       WalkingTimesView(pet: pet)
                     } label: {
-                        HealthJournalRowView(icon: "Color2", text: "Training", image: "Training")
+                        HealthJournalRowView(icon: "CareNotes", text: "Walking Times", image: "Socialize")
                     }
-                    NavigationLink {
-                        Text("Socialize")
-                    } label: {
-                        HealthJournalRowView(icon: "PetAlbum", text: "Socialize", image: "Socialize")
-                    }
-                    NavigationLink {
-                        Text("CheckList Page")
-                    } label: {
-                        HealthJournalRowView(icon: "HealthJournal", text:"CheckList", image: "Checklist")
-                    }
+    
                 }
                 Spacer()
             }

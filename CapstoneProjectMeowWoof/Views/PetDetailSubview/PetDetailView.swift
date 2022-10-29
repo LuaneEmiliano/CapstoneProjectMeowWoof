@@ -17,7 +17,7 @@ struct PetDetailView: View {
                 Text("Hello \(pet.name)!")
                     .font(.title)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color("ButtonStrokeColor"))
+                    .foregroundColor(Color.buttonStrokeColor)
                     .padding()
                 Image("Labrador")
                     .resizable()
@@ -28,7 +28,7 @@ struct PetDetailView: View {
                     .padding(.bottom, 20)
                   }
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color("Color"))
+                .fill(Color.lightBlueColor)
                 .frame(width: 370, height: 130, alignment:.center)
                 .overlay(
                     HStack (spacing: 30){
@@ -47,21 +47,25 @@ struct PetDetailView: View {
             HStack {
                 VStack {
                     NavigationLink {
-                        MedicalRecordView()
+                        MedicalRecordView(pet: pet)
                     } label: {
-                        PetDetailRoundedView(color: "MedicalRecords", text: "Medical Record", icon: "Checklist")
+                        PetDetailRoundedView(color: "MedicalRecordsColor", text: "Medical Record", icon: "Checklist")
                     }
                     NavigationLink {
                         HealthJournalView(pet: pet)
                     } label: {
-                        PetDetailRoundedView(color: "Detailed", text: "Health Journal", icon: "Journal")
+                        PetDetailRoundedView(color: "DetailedColor", text: "Health Journal", icon: "Journal")
                     }
                     NavigationLink{
-                        PhotoHomeView()
+                      PhotoHomeView(pet: pet)
                     } label: {
-                        PetDetailRoundedView(color:"PetAlbum", text: "Pet Album", icon: "Album")
+                        PetDetailRoundedView(color: "PetAlbum", text: "Pet Album", icon: "Album")
                     }
-                    PetDetailRoundedView(color: "CareNotes", text: "Care Notes", icon: "Info")
+                    NavigationLink {
+                        CareNotesView(pet: pet)
+                    } label: {
+                        PetDetailRoundedView(color: "CareNotes", text: "Care Notes", icon: "Info")
+                    }
                 }
             }
         }

@@ -22,11 +22,11 @@ struct NoItemsAddedView: View {
                     destination: AddNewItemView(),
                  label: {
                     Text("Add something...")
-                         .foregroundColor(Color("Color4"))
+                         .foregroundColor(Color.blackColor)
                          .font(.headline)
                          .frame(height: 55)
                          .frame(maxWidth: .infinity)
-                         .background(Color("Color-1"))
+                         .background(Color.universalColor)
                          .cornerRadius(10)
                 })
 

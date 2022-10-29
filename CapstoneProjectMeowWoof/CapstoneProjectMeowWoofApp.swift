@@ -15,54 +15,9 @@ struct CapstoneProjectMeowWoofApp: App {
     @StateObject var homework08 = DownloadImageAsyncViewModel()
     let persistenceController = PersistenceController.shared
     @StateObject var petsViewModel = PetViewModel()
-    
+    @StateObject var mainMessageChat = MainMessagesViewModel()
     @State private var description: String?
         
-//        private func getCookiesTapped() async {
-//          func setDescription(for cookies: [HTTPCookie]? = nil) {
-//            Task { @MainActor in
-//              guard let cookies = cookies, !cookies.isEmpty else {
-//                description = "Cookies: N/A"
-//
-//                return
-//              }
-//
-//              var descriptionString = ""
-//
-//              for cookie in cookies {
-//                descriptionString += "\(cookie.name): \(cookie.value)\n"
-//              }
-//
-//              description = descriptionString
-//                print(description ?? "")
-//            }
-//          }
-//
-//          guard let url = URL(string: "https://www.raywenderlich.com") else {
-//            setDescription()
-//
-//            return
-//          }
-//
-//          do {
-//            let (_, response) = try await URLSession.shared.data(from: url)
-//
-//            guard let httpResponse = response as? HTTPURLResponse,
-//              let fields = httpResponse.allHeaderFields as? [String: String]
-//            else {
-//              setDescription()
-//
-//              return
-//            }
-//
-//            let cookies = HTTPCookie.cookies(withResponseHeaderFields: fields, for: url)
-//
-//            setDescription(for: cookies)
-//          } catch {
-//            setDescription()
-//          }
-//        }
-
     var body: some Scene {
         WindowGroup {
            ZStack {
@@ -76,6 +31,7 @@ struct CapstoneProjectMeowWoofApp: App {
             .environmentObject(petsViewModel)
             .environmentObject(launchScreenManager)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            .environmentObject(mainMessageChat)
                }
             }
         }

@@ -42,7 +42,7 @@ struct AnimalListView: View {
                             Image(systemName: "plus.circle")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                                .foregroundColor(Color("Detailed"))
+                                .foregroundColor(Color.detailedColor)
                                 .padding(5)
                         })
                 )
@@ -54,11 +54,11 @@ struct AnimalListView: View {
     
     func determineColor(pet: Pet) -> String {
         if pet.typeOfAnimal == "dog" {
-           return "Color2"
+           return "lightPurpleColor"
         } else if pet.typeOfAnimal == "cat" {
            return "CareNotes"
         } else {
-            return "HealthJournal"
+            return "HealthJournalColor"
         }
     }
 }

@@ -48,7 +48,7 @@ struct PetTypeView: View {
                     Button {
                         petOptions = list[2]
                     } label: {
-                        PetTypeRowView(icon: "HealthJournal", text: "Other", image: "Others", petOptions: $petOptions)
+                        PetTypeRowView(icon: "HealthJournalColor", text: "Other", image: "Others", petOptions: $petOptions)
                     }
                 }
             }
@@ -65,7 +65,7 @@ struct PetTypeView: View {
                 Text("Next")
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 15)
-                    .background(Color("ButtonColor"))
+                    .background(Color.buttonColor)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.headline)

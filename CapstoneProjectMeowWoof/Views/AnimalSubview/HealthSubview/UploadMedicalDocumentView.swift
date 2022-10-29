@@ -1,13 +1,13 @@
 //
-//  PhotoHomeView.swift
+//  UploadMedicalDocumentView.swift
 //  CapstoneProjectMeowWoof
 //
-//  Created by luane Niejelski on 9/25/22.
+//  Created by luane Niejelski on 10/28/22.
 //
 
 import SwiftUI
 
-struct PhotoHomeView: View {
+struct UploadMedicalDocumentView: View {
     @State var shouldShowImagePicker = false
     @State var image: UIImage?
     let pet: Pet
@@ -31,18 +31,17 @@ struct PhotoHomeView: View {
                             }
                         }
                     }
-                    Spacer()
-                    
                     VStack {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(pet.petPhotos, id: \.self) { photoString in
-                                if let uiImage = PhotoModelFileManager.instance.get(key: photoString) {
+                            ForEach(pet.petMedicalRecords, id: \.self) { petMedicalRecord in
+                                if let uiImage = PhotoModelFileManager.instance.get(key: petMedicalRecord ){
                                     Image(uiImage: uiImage)
                                         .resizable()
                                         .aspectRatio( contentMode: .fill)
                                         .frame(width: 115 , height: 115)
                                         .cornerRadius(12)
                                 }
+                                
                             }
                         }
                     }
@@ -55,7 +54,7 @@ struct PhotoHomeView: View {
                             if let image = image {
                                 PhotoModelFileManager.instance.add(key: id, value: image)
                             }
-                            viewModel.savePetImage(pet: pet, id: id)
+                            viewModel.saveMedicalDocumentsImage(pet: pet, id: id)
                             viewModel.savePets()
                         }
                 }
@@ -63,14 +62,13 @@ struct PhotoHomeView: View {
                     ImagePicker(image: $image)
                 }
             }
-            .navigationTitle("Pet Album")
+            .navigationTitle("Pet Medical Record 📝")
         }
     }
 }
 
-struct PhotoHomeView_Previews: PreviewProvider {
+struct UploadMedicalDocumentView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoHomeView(pet: Pet(name: "Luna"))
-            .preferredColorScheme(.light)
+        UploadMedicalDocumentView(pet: Pet(name: "Luna"))
     }
 }

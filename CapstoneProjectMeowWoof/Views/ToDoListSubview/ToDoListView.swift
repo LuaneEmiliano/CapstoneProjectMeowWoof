@@ -41,8 +41,8 @@ struct ToDoListView: View {
                                     NavigationLink("Add", destination:AddNewItemView())
                                     
             )
-            .foregroundColor(Color("Color-1"))
-            .background(Color("Color4"))
+            .foregroundColor(Color.universalColor)
+            .background(Color.blackColor)
            
         }
     }

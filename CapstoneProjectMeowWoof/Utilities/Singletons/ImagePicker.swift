@@ -12,6 +12,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     @Binding var image: UIImage?
 
     private let controller = UIImagePickerController()
+    
 
     func makeCoordinator() -> Coordinator {
         return Coordinator(parent: self)

@@ -45,7 +45,7 @@ struct PetGenderView: View {
                 Text("Next")
                     .frame(maxWidth:.infinity)
                     .padding(.vertical,15)
-                    .background(Color("ButtonColor"))
+                    .background(Color.buttonColor)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }

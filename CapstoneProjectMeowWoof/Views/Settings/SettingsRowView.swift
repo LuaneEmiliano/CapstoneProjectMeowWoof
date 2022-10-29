@@ -25,10 +25,10 @@ struct SettingsRowView: View {
                 .padding(.trailing,30)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 20)
+        .frame(height: 40)
         .foregroundColor(.black)
         .padding()
-        .background(Color("PetAlbum"))
+        .background(Color.lightpurpleColor)
         .cornerRadius(10)
         .padding()
     }

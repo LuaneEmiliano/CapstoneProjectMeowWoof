@@ -34,7 +34,7 @@ struct MedicalRecordRowView: View {
         .frame(height: 150)
         .foregroundColor(.black)
         .padding()
-        .background(Color("MedicalRecords"))
+        .background(Color.medicalRecordsColor)
         .cornerRadius(20)
     }
 }

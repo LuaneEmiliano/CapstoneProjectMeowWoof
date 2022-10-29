@@ -10,7 +10,7 @@ import SwiftUI
 struct PetTabView: View {
     
     @EnvironmentObject var launchScreenManager: LaunchScreenManager
-    @State var selectedTab: Int = 0
+    @State var selectedTab: Int = 1
     
     var body: some View {
         
@@ -27,7 +27,7 @@ struct PetTabView: View {
                     Image(systemName: "alarm.fill")
                     Text("Reminder")
                 }
-            TheCatView()
+         MainMessageView()
                 .tag(1)
                 .tabItem {
                     Image(systemName: "message.fill")

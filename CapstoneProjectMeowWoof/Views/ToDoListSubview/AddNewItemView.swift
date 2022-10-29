@@ -18,14 +18,14 @@ struct AddNewItemView: View {
     
     var body: some View {
         ZStack {
-            Color("Color4")
+            Color.blackColor
                 .ignoresSafeArea()
             ScrollView {
                 VStack {
                     TextField("Enter the new item...", text: $textFieldText)
                         .padding(.horizontal)
                         .frame( height: 55)
-                        .foregroundColor(Color("Color-1"))
+                        .foregroundColor(Color("textfield"))
                         .background(Color.gray.opacity(0.1))
                         .cornerRadius(10)
                     
@@ -35,7 +35,7 @@ struct AddNewItemView: View {
                             .font(.headline)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(Color("PetAlbum"))
+                            .background(Color.petAlbum)
                             .cornerRadius(20)
                     })
                 }
@@ -43,7 +43,7 @@ struct AddNewItemView: View {
             }
             
              .navigationTitle("Add a new Item.")
-            .background(Color("Color4"))
+             .background(Color.blackColor)
         .alert(isPresented: $showAlert, content: getAlert )
             
         }
@@ -74,6 +74,7 @@ struct AddView_Previews: PreviewProvider {
         NavigationView {
             AddNewItemView()
         }
+        .preferredColorScheme(.light)
         .environmentObject(ListViewModel())
     }
 }

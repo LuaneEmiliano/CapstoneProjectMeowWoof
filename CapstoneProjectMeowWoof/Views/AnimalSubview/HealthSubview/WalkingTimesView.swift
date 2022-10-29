@@ -1,5 +1,5 @@
 //
-//  PottyTimesView.swift
+//  WalkingTimesView.swift
 //  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 10/24/22.
@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct PottyTimesView: View {
+struct WalkingTimesView: View {
     @EnvironmentObject var viewModel: PetViewModel
     let pet: Pet
     
     var body: some View {
         VStack {
             ScrollView {
-                ForEach(pet.pottyTimes, id: \.self) { pottyTime in
-                    Text(pottyTime.dayAndTimeText)
+                ForEach(pet.walkingTimes, id: \.self) {
+                    walkingTime in
+                    Text(walkingTime.dayAndTimeText)
                         .font(.title2)
                         .fontWeight(/*@START_MENU_TOKEN@*/.semibold/*@END_MENU_TOKEN@*/)
                         .frame(height: 20)
                 }
             }
-            
             Button {
-                viewModel.addPottyTimesToPet(pet: pet, time: Date())
+                viewModel.addWalkingTimesToPet(pet: pet, time: Date())
                 viewModel.savePets()
             } label: {
-                Text("Add Potty times 🐶")
+                Text("Add walks here!")
                     .font(.title2)
                     .frame(maxWidth: .infinity)
                     .frame(height: 20)
@@ -36,16 +36,16 @@ struct PottyTimesView: View {
                     .cornerRadius(10)
                     .padding()
             }
+            
         }
-        .navigationTitle("Hey, It's potty time!")
+        .navigationTitle("Let's go for a walk😄!")
         .padding(.all, 50)
     }
 }
 
-struct PottyTimesView_Previews: PreviewProvider {
+struct WalkingTimesView_Previews: PreviewProvider {
     static var previews: some View {
-        PottyTimesView(pet: Pet(name: "Luna", pottyTimes: [Date() - 500000, Date()]))
-            .preferredColorScheme(.light)
-.previewInterfaceOrientation(.portrait)
+        WalkingTimesView(pet: Pet(name: "Olivia",feedTimes: [Date() - 500000, Date()]))
+            .preferredColorScheme(.dark)
     }
 }

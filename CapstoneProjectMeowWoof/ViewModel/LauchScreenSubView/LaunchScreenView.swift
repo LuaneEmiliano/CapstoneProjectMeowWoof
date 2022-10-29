@@ -50,7 +50,7 @@ struct LaunchScreenView_Previews: PreviewProvider {
 
 private extension LaunchScreenView {
     var background: some View {
-        Color("PetAlbum")
+        Color.petAlbum
             .edgesIgnoringSafeArea(.all)
     }
     var logo: some View {
