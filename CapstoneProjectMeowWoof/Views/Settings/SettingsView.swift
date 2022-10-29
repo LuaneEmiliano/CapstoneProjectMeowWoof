@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    @EnvironmentObject var viewModel: MainMessagesViewModel
+    @Binding var shouldShowLogOutOptions: Bool
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -31,7 +35,10 @@ struct SettingsView: View {
                 Spacer()
                 
                 Button {
+                    viewModel.handleSignOut()
                     
+                    // Show login screen again
+                    shouldShowLogOutOptions.toggle()
                 } label: {
                     Text("SIGN OUT")
                         .frame(maxWidth: .infinity)
@@ -50,7 +57,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView( shouldShowLogOutOptions: .constant(false))
             .preferredColorScheme(.light)
     }
 }

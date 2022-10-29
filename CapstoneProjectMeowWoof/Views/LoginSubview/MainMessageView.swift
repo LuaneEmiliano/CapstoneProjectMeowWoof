@@ -11,13 +11,13 @@ import Firebase
 
 struct MainMessageView: View {
     
-    @State var shouldShowLogOutOptions: Bool = false
+    @Binding var shouldShowLogOutOptions: Bool
     @State var shouldShowNewMessageScreen: Bool = false
     @ObservedObject var vm = MainMessagesViewModel()
     @State var chatUser: ChatUser?
     @State var shouldNavigateToChatLogView = false
     
-    private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+    var chatLogViewModel = ChatLogViewModel(chatUser: nil)
     @EnvironmentObject var launchScreenManager: LaunchScreenManager
     
     var body: some View {
@@ -162,7 +162,7 @@ struct MainMessageView: View {
 
 struct MainMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMessageView()
+        MainMessageView(shouldShowLogOutOptions: .constant(true))
             .environmentObject(LaunchScreenManager())
     }
 }

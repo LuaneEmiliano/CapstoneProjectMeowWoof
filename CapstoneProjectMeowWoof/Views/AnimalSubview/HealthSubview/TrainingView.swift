@@ -27,14 +27,11 @@ struct TrainingView: View {
             
             DatePicker("Date of training", selection: $date)
             TextField("Add Training Name Here...", text: $textField)
-                .font(.headline)
-                .frame(height: 20)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.black)
-                .padding()
-                .background(Color.textfieldColor)
-                .cornerRadius(10)
-                .padding()
+                .padding(.horizontal, 20)
+                .padding(.vertical, 15)
+                .background(Color.blackColor)
+                .border(.black)
+                .cornerRadius(5)
             
             Spacer()
             Button {
@@ -51,7 +48,7 @@ struct TrainingView: View {
                     .frame(height: 20)
                     .foregroundColor(.black)
                     .padding()
-                    .background(Color.lightpurpleColor)
+                    .background(Color.lightBlueColor)
                     .cornerRadius(10)
                     .padding()
             }

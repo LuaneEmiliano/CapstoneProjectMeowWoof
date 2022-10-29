@@ -32,7 +32,7 @@ struct WalkingTimesView: View {
                     .frame(height: 20)
                     .foregroundColor(.black)
                     .padding()
-                    .background(Color.petAlbum)
+                    .background(Color.careNotes)
                     .cornerRadius(10)
                     .padding()
             }

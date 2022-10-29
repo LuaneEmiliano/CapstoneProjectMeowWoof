@@ -11,6 +11,7 @@ struct PetTabView: View {
     
     @EnvironmentObject var launchScreenManager: LaunchScreenManager
     @State var selectedTab: Int = 1
+    @State var shouldShowLogOutOptions: Bool = false
     
     var body: some View {
         
@@ -27,14 +28,14 @@ struct PetTabView: View {
                     Image(systemName: "alarm.fill")
                     Text("Reminder")
                 }
-         MainMessageView()
+            MainMessageView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
                 .tag(1)
                 .tabItem {
                     Image(systemName: "message.fill")
                     Text("Chat")
                 }
                 .tag(2)
-                SettingsView()
+            SettingsView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
                 .tabItem {
                     Image(systemName: "ellipsis.circle.fill")
                     Text("More")
@@ -45,7 +46,7 @@ struct PetTabView: View {
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
 //                    launchScreenManager.dismiss()
 //                }
-//        }
+       // }
         
     }
     

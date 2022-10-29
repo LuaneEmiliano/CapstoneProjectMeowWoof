@@ -9,10 +9,12 @@ import SwiftUI
 
 struct UploadMedicalDocumentView: View {
     @State var shouldShowImagePicker = false
-    @State var image: UIImage?
+    @State var image: UIImage? = nil
+    @State var imageFullScreen: UIImage?
     let pet: Pet
     let columns = [GridItem(.adaptive(minimum: 100))]
     @EnvironmentObject var viewModel: PetViewModel
+    @State var sheetImage: Bool = false
     
     var body: some View {
         ZStack {
@@ -60,6 +62,11 @@ struct UploadMedicalDocumentView: View {
                 }
                 .fullScreenCover(isPresented: $shouldShowImagePicker) {
                     ImagePicker(image: $image)
+                }
+                .sheet(isPresented: $sheetImage) {
+                    if let image = imageFullScreen {
+                        FullScreenImageView(image: image)
+                    }
                 }
             }
             .navigationTitle("Pet Medical Record 📝")

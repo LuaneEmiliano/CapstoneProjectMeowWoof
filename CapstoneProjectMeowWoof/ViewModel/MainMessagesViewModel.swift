@@ -83,8 +83,8 @@ class MainMessagesViewModel: ObservableObject {
     }
     
     
-    func  handleSignOut() {
+    func handleSignOut() {
         isUserCurrentlyLoggedOut.toggle()
-        try?FirebaseManager.shared.auth.signOut()
+        try? FirebaseManager.shared.auth.signOut()
     }
 }
