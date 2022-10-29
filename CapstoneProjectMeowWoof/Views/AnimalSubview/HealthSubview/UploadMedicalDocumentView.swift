@@ -62,10 +62,13 @@ struct UploadMedicalDocumentView: View {
                 }
                 .fullScreenCover(isPresented: $shouldShowImagePicker) {
                     ImagePicker(image: $image)
+                    
+
                 }
                 .sheet(isPresented: $sheetImage) {
                     if let image = imageFullScreen {
                         FullScreenImageView(image: image)
+                        
                     }
                 }
             }

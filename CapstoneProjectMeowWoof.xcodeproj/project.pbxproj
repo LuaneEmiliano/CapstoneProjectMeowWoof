@@ -80,7 +80,7 @@
 		6BF06F9D28EB65250030BFAE /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06F9C28EB65240030BFAE /* ChatUser.swift */; };
 		6BF06F9F28EB69690030BFAE /* NewMessageChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06F9E28EB69690030BFAE /* NewMessageChatView.swift */; };
 		6BF06FA128EB85600030BFAE /* MainMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06FA028EB85600030BFAE /* MainMessagesViewModel.swift */; };
-		6BF06FA328EB87820030BFAE /* ChatLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06FA228EB87820030BFAE /* ChatLoginView.swift */; };
+		6BF06FA328EB87820030BFAE /* ChatLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF06FA228EB87820030BFAE /* ChatLogView.swift */; };
 		6BF43905290C4555007D8035 /* UploadVaccinationDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF43904290C4555007D8035 /* UploadVaccinationDocumentView.swift */; };
 		6BF43907290C4592007D8035 /* UploadMedicalDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF43906290C4592007D8035 /* UploadMedicalDocumentView.swift */; };
 		6BF43909290C45A9007D8035 /* UploadInsuranceDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF43908290C45A9007D8035 /* UploadInsuranceDocumentView.swift */; };
@@ -192,7 +192,7 @@
 		6BF06F9C28EB65240030BFAE /* ChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUser.swift; sourceTree = "<group>"; };
 		6BF06F9E28EB69690030BFAE /* NewMessageChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageChatView.swift; sourceTree = "<group>"; };
 		6BF06FA028EB85600030BFAE /* MainMessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesViewModel.swift; sourceTree = "<group>"; };
-		6BF06FA228EB87820030BFAE /* ChatLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLoginView.swift; sourceTree = "<group>"; };
+		6BF06FA228EB87820030BFAE /* ChatLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogView.swift; sourceTree = "<group>"; };
 		6BF43904290C4555007D8035 /* UploadVaccinationDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVaccinationDocumentView.swift; sourceTree = "<group>"; };
 		6BF43906290C4592007D8035 /* UploadMedicalDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMedicalDocumentView.swift; sourceTree = "<group>"; };
 		6BF43908290C45A9007D8035 /* UploadInsuranceDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadInsuranceDocumentView.swift; sourceTree = "<group>"; };
@@ -292,6 +292,7 @@
 				6B935E9128F1A8C000D06D73 /* LaunchScreenManager.swift */,
 				6B7F15BC28F9E3B200C4140F /* MainMessageModel.swift */,
 				6B7F15C328F9E73400C4140F /* ChatMessageModel.swift */,
+				6BF06F9C28EB65240030BFAE /* ChatUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,7 +302,7 @@
 			children = (
 				6BB9A2A12904734B008945BF /* Settings */,
 				6B6F2E5C28DF465C00D7363B /* PetTabSubview */,
-				6B445B2928E8EFC500CAAA8C /* LoginSubview */,
+				6B445B2928E8EFC500CAAA8C /* Messages+LoginSubview */,
 				6BFF054728DFB9FC0059712A /* AnimalHomeSubview */,
 				6B6F2E5B28DF45FA00D7363B /* ToDoListSubview */,
 				6B6F2E5928DF453B00D7363B /* HealthSubview */,
@@ -322,16 +323,16 @@
 			path = CoreDataViewModel;
 			sourceTree = "<group>";
 		};
-		6B445B2928E8EFC500CAAA8C /* LoginSubview */ = {
+		6B445B2928E8EFC500CAAA8C /* Messages+LoginSubview */ = {
 			isa = PBXGroup;
 			children = (
 				6B8AE3F828E88721006F2039 /* CreateAccountView.swift */,
 				6B445B3728EA321900CAAA8C /* MainMessageView.swift */,
 				6BF06F9E28EB69690030BFAE /* NewMessageChatView.swift */,
-				6BF06FA228EB87820030BFAE /* ChatLoginView.swift */,
+				6BF06FA228EB87820030BFAE /* ChatLogView.swift */,
 				6B78C5FC29085F400032287D /* ResetPasswordView.swift */,
 			);
-			path = LoginSubview;
+			path = "Messages+LoginSubview";
 			sourceTree = "<group>";
 		};
 		6B6F2E5628DF446200D7363B /* PetDetailSubview */ = {
@@ -425,7 +426,6 @@
 				6B793C05290AFDEB009C17AB /* PhotoModelFileManager.swift */,
 				6B6F2E6828DF907400D7363B /* Sounds */,
 				6B6F2E6628DF8C5F00D7363B /* SoundManager.swift */,
-				6BF06F9C28EB65240030BFAE /* ChatUser.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -696,7 +696,7 @@
 				6B20B6BD28D9448900E0BE9A /* ListViewModel.swift in Sources */,
 				6BF4390C290C6065007D8035 /* ColorExtension.swift in Sources */,
 				6B935E9228F1A8C000D06D73 /* LaunchScreenManager.swift in Sources */,
-				6BF06FA328EB87820030BFAE /* ChatLoginView.swift in Sources */,
+				6BF06FA328EB87820030BFAE /* ChatLogView.swift in Sources */,
 				6BF4390E290D7D52007D8035 /* FullScreenImageView.swift in Sources */,
 				6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */,
 				6B607C6F28E8EA6200C44D55 /* ToDoListRowView.swift in Sources */,

@@ -26,7 +26,7 @@ struct MainMessageView: View {
                 customNavBar
                 messageView
                 
-                NavigationLink("",isActive: $shouldNavigateToChatLogView) {
+                NavigationLink("", isActive: $shouldNavigateToChatLogView) {
                     PetChatView(vm: chatLogViewModel)
                 }
             }
@@ -62,13 +62,6 @@ struct MainMessageView: View {
                 }
             }
             Spacer()
-            Button  {
-                shouldShowLogOutOptions.toggle()
-            } label: {
-                Image(systemName: "gear")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(Color(.label))
-            }
         }
         .padding()
         .actionSheet(isPresented: $shouldShowLogOutOptions) {
@@ -94,8 +87,20 @@ struct MainMessageView: View {
         ScrollView {
             ForEach(vm.recentMessages) { recentMessage in
                 VStack {
-                    NavigationLink {
-                        Text("dest")
+                    Button {
+                        let uid = FirebaseManager.shared.auth.currentUser?.uid == recentMessage.fromId ? recentMessage.toId : recentMessage.fromId
+                        
+//                        self.chatUser = .init(id: uid, uid: uid, email: recentMessage.email, profileImageUrl: recentMessage.profileImageUrl)
+                        
+                        self.chatUser = .init(data: [
+                            FirebaseConstants.email: recentMessage.email,
+                            FirebaseConstants.profileImageUrl: recentMessage.profileImageUrl,
+                            "uid": uid
+                        ])
+                        
+                        self.chatLogViewModel.chatUser = self.chatUser
+                        self.chatLogViewModel.fetchMessages()
+                        self.shouldNavigateToChatLogView.toggle()
                     } label: {
                         HStack(spacing: 16) {
                             WebImage(url: URL(string: recentMessage.profileImageUrl))
@@ -105,9 +110,9 @@ struct MainMessageView: View {
                                 .clipped()
                                 .cornerRadius(64)
                                 .overlay(
-                                RoundedRectangle(cornerRadius: 64)
-                                    .stroke(Color.black, lineWidth: 1)
-                                    .shadow( radius: 5)
+                                    RoundedRectangle(cornerRadius: 64)
+                                        .stroke(Color.black, lineWidth: 1)
+                                        .shadow( radius: 5)
                                 )
                             VStack(alignment: .leading) {
                                 Text(recentMessage.email)
@@ -125,7 +130,7 @@ struct MainMessageView: View {
                                 .foregroundColor(Color.universalColor)
                         }
                     }
-                                   Divider()
+                    Divider()
                         .padding(.vertical, 8)
                 }.padding(.horizontal)
             }.padding(.bottom, 50)
@@ -156,7 +161,7 @@ struct MainMessageView: View {
                 self.chatLogViewModel.fetchMessages()
             })
         }
-
+        
     }
 }
 

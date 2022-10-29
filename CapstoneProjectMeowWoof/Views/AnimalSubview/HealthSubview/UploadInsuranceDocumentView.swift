@@ -13,6 +13,7 @@ struct UploadInsuranceDocumentView: View {
     let pet: Pet
     let columns = [GridItem(.adaptive(minimum: 100))]
     @EnvironmentObject var viewModel: PetViewModel
+    @State var currentAmount: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -43,6 +44,14 @@ struct UploadInsuranceDocumentView: View {
                                 }
                                 
                             }
+                            .gesture(
+                            MagnificationGesture()
+                                .onChanged({ value  in
+                                    currentAmount = value - 1
+                                }
+                            )
+                            
+                            )
                         }
                     }
                     .padding(.horizontal)
