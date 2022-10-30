@@ -17,6 +17,11 @@ struct CapstoneProjectMeowWoofApp: App {
     @StateObject var petsViewModel = PetViewModel()
     @StateObject var mainMessageChat = MainMessagesViewModel()
     @State private var description: String?
+    
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+        UITextView.appearance().textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+    }
         
     var body: some Scene {
         WindowGroup {

@@ -28,7 +28,7 @@ struct PetTabView: View {
                     Image(systemName: "alarm.fill")
                     Text("Reminder")
                 }
-            MainMessageView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
+            MainMessagesView()
                 .tag(1)
                 .tabItem {
                     Image(systemName: "message.fill")

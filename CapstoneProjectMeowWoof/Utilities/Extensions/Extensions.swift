@@ -8,6 +8,9 @@
 import Foundation
 
 extension Date {
+    var timeText: String {
+        return formatted(date: .omitted, time: .shortened)
+    }
     var dayText: String {
         if Locale.current.calendar.isDateInToday(self) {
             return NSLocalizedString("Today", comment: "Today due date description")
@@ -35,4 +38,9 @@ extension Date {
                 return String(format: dateAndTimeFormat, dateText, timeText)
             }
         }
+    var timeAgo: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        return formatter.localizedString(for: self, relativeTo: Date())
+    }
 }
