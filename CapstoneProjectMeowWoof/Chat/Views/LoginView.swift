@@ -20,63 +20,99 @@ struct LoginView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: Project.Constants.General.spacing) {
-                    Picker(selection: $isLoginMode) {
-                        Text("Log In")
-                            .tag(true)
-                        Text("Create Account")
-                            .tag(false)
-                    } label: { Text("Picker") }
-                        .pickerStyle(.segmented)
+            ZStack {
+                GeometryReader { proxy in
                     
-                    if !isLoginMode {
+                    let height = proxy.frame(in: .global).height
+                    AnyView(
                         
-                        ImagePickerView(selectedImage: $image, id: "", text: "Add Profile Image", iconImage: "person.fill")
-                    }
-                    
-                    TextField("Email", text: $email)
-                        .foregroundColor(.primary)
-                        .keyboardType(.emailAddress)
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: Project.Constants.General.roundedEdges)
-                                .stroke(lineWidth: 2)
-                                .opacity(0.2)
-                        )
-                    SecureField("Password", text: $password)
-                        .foregroundColor(.primary)
-                        .autocapitalization(.none)
-                        .padding()
-                        .background(
-                            RoundedRectangle(cornerRadius: Project.Constants.General.roundedEdges)
-                                .stroke(lineWidth: 2)
-                                .opacity(0.2)
-                        )
-                    
-                    WideStyleActionButton(
-                        action: { handleAction() },
-                        buttonText: isLoginMode ? "Log In" : "Create Account"
+                        ZStack {
+                            Circle()
+                                .fill(Color.petAlbum)
+                                .offset(x: getRect().width / 2, y: height / 1)
+                                .frame(width: proxy.size.width/1.3, height: proxy.size.width/1.3)
+                                .opacity(0.8)
+                            Circle()
+                                .fill(Color.careNotes)
+                                .offset(x: -getRect().width / 2, y: height / 1)
+                            Circle()
+                                .fill(Color.lightBlueColor)
+                                .offset(y: height / 1)
+                                .rotationEffect(.init(degrees:  -5))
+                                .frame(width: proxy.size.width/1.5, height: proxy.size.width/1.5)
+                                .opacity(0.9)
+                        }
                     )
-                    
-                    Text(loginStatusMessage)
-                        .foregroundColor(.red)
                 }
-                .padding()
+                .frame(maxHeight: getRect().width)
+                ScrollView {
+                    Spacer()
+                    VStack(spacing: Project.Constants.General.spacing) {
+                        Picker(selection: $isLoginMode) {
+                            
+                            Text("Log In")
+                                .tag(true)
+                            Text("Create Account")
+                                .tag(false)
+                        } label: { Text("Picker") }
+                        .pickerStyle(.segmented)
+                        
+                        if !isLoginMode {
+                            
+                            ImagePickerView(selectedImage: $image, id: "", text: "Add Profile Image", iconImage: "person.fill")
+                        }
+                        
+                        TextField("Email", text: $email)
+                            .foregroundColor(.universalColor)
+                            .keyboardType(.emailAddress)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: Project.Constants.General.roundedEdges)
+                                    .stroke(lineWidth: 2)
+                                
+                            )
+                        SecureField("Password", text: $password)
+                            .foregroundColor(.universalColor)
+                            .autocapitalization(.none)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: Project.Constants.General.roundedEdges)
+                                    .stroke(lineWidth: 2)
+                            )
+                        
+                        WideStyleActionButton(
+                            action: { handleAction() },
+                            buttonText: isLoginMode ? "Log In" : "Create Account")
+                            .frame(maxWidth: . infinity,
+                            minHeight: 25)
+                            .font(.headline)
+                            .padding()
+                            .foregroundColor(.blackColor)
+                            .background(Color.universalColor)
+                            .cornerRadius(10)
+                        
+                        Text(loginStatusMessage)
+                            .foregroundColor(.red)
+                    }
+                    .padding()
+                }
+                .navigationTitle(isLoginMode ? "Log In" : "Create Account")
+                
             }
-            .navigationTitle(isLoginMode ? "Log In" : "Create Account")
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
+        
     }
-    
     
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(didCompleteLoginProcess: { } )
+            .preferredColorScheme(.light)
+            .accessibilityLabel(/*@START_MENU_TOKEN@*/"Label"/*@END_MENU_TOKEN@*/)
     }
 }
 
@@ -89,6 +125,8 @@ extension LoginView {
         } else {
             createNewAccount()
         }
+        
+        
     }
     
     private func loginUser() {
@@ -162,5 +200,8 @@ extension LoginView {
                 print("Success")
                 self.didCompleteLoginProcess()
             }
+    }
+    func getRect()-> CGRect {
+        return UIScreen.main.bounds
     }
 }

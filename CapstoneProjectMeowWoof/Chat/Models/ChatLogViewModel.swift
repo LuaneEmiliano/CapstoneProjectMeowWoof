@@ -62,11 +62,11 @@ class ChatLogViewModel: ObservableObject {
         guard let toId = chatUser?.uid else { return }
         
         let document =
-            FirebaseManager.shared.firestore
-                .collection(Project.FirebaseConstants.messages)
-                .document(fromId)
-                .collection(toId)
-                .document()
+        FirebaseManager.shared.firestore
+            .collection(Project.FirebaseConstants.messages)
+            .document(fromId)
+            .collection(toId)
+            .document()
         
         let messageData = [Project.FirebaseConstants.fromId: fromId, Project.FirebaseConstants.toId: toId, Project.FirebaseConstants.text: self.chatText, Project.FirebaseConstants.timestamp: Timestamp()] as [String : Any]
         
@@ -84,11 +84,11 @@ class ChatLogViewModel: ObservableObject {
         }
         
         let recipientMessageDocument =
-            FirebaseManager.shared.firestore
-                .collection(Project.FirebaseConstants.messages)
-                .document(toId)
-                .collection(fromId)
-                .document()
+        FirebaseManager.shared.firestore
+            .collection(Project.FirebaseConstants.messages)
+            .document(toId)
+            .collection(fromId)
+            .document()
         
         recipientMessageDocument.setData(messageData) { error in
             if let error = error {
@@ -106,11 +106,11 @@ class ChatLogViewModel: ObservableObject {
         guard let toId = self.chatUser?.uid else { return }
         
         let document =
-            FirebaseManager.shared.firestore
-                .collection(Project.FirebaseConstants.recentMessages)
-                .document(fromId)
-                .collection(Project.FirebaseConstants.messages)
-                .document(toId)
+        FirebaseManager.shared.firestore
+            .collection(Project.FirebaseConstants.recentMessages)
+            .document(fromId)
+            .collection(Project.FirebaseConstants.messages)
+            .document(toId)
         
         let data = [
             Project.FirebaseConstants.timestamp: Timestamp(),
@@ -128,11 +128,11 @@ class ChatLogViewModel: ObservableObject {
         }
         
         let recipientMessageDocument =
-            FirebaseManager.shared.firestore
-                .collection(Project.FirebaseConstants.recentMessages)
-                .document(toId)
-                .collection(Project.FirebaseConstants.messages)
-                .document(fromId)
+        FirebaseManager.shared.firestore
+            .collection(Project.FirebaseConstants.recentMessages)
+            .document(toId)
+            .collection(Project.FirebaseConstants.messages)
+            .document(fromId)
         
         recipientMessageDocument.setData(data) { error in
             if let error = error {

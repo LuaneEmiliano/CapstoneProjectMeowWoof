@@ -18,12 +18,8 @@ struct WideStyleActionButton: View {
         } label: {
             Text(buttonText)
         }
-
+        
     }
 }
 
-//struct WideStyleActionButton_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WideStyleActionButton(action: , buttonText: "Test")
-//    }
-//}
+

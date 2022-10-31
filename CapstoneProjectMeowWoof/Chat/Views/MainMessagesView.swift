@@ -11,14 +11,14 @@ import Firebase
 
 struct MainMessagesView: View {
     
-    @State var shouldShowLogOutOptions = false
+    @Binding var shouldShowLogOutOptions: Bool
     @State var shouldShowNewMessageScreen = false
     @State var shouldNavigateToChatLogView = false
     
     @State var chatUser: ChatUserModel? = nil
     
-    @ObservedObject private var vm = MainMessagesViewModel()
-    private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+    @ObservedObject var vm = MainMessagesViewModel()
+    var chatLogViewModel = ChatLogViewModel(chatUser: nil)
     
     var body: some View {
         NavigationView {
@@ -34,7 +34,7 @@ struct MainMessagesView: View {
                     shouldShowNewMessageScreen.toggle()
                 }, buttonText: "+ New Message")
                     .padding(.horizontal),
-                    alignment: .bottom
+                alignment: .bottom
             )
             .fullScreenCover(isPresented: $vm.isUserCurrentlyLoggedOut) {
                 LoginView(didCompleteLoginProcess: {
@@ -94,9 +94,9 @@ struct MainMessagesView: View {
             Spacer()
             Image(systemName: "gear")
                 .font(.title2)
-                .onTapGesture {
-                    shouldShowLogOutOptions.toggle()
-                }
+//                .onTapGesture {
+//                    shouldShowLogOutOptions.toggle()
+//                }
         }
         .padding()
         .confirmationDialog("Settings", isPresented: $shouldShowLogOutOptions, titleVisibility: .visible) {
@@ -160,8 +160,8 @@ struct MainMessagesView: View {
                             
                         }
                     }
-                Divider()
-                    .padding(.vertical, Project.Constants.General.paddingSmall)
+                    Divider()
+                        .padding(.vertical, Project.Constants.General.paddingSmall)
                 }
                 .padding(.horizontal)
             }
@@ -175,7 +175,7 @@ struct MainMessagesView: View {
 
 struct MainMessagesView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMessagesView()
-            
+        MainMessagesView(shouldShowLogOutOptions: .constant(true))
+        
     }
 }

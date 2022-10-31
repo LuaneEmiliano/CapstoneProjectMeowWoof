@@ -24,7 +24,7 @@
 		6B20B6D928D9449900E0BE9A /* PetDetailRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */; };
 		6B20B6DA28D9449900E0BE9A /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */; };
 		6B20B6DB28D9449900E0BE9A /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C628D9449900E0BE9A /* ToDoListView.swift */; };
-		6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C828D9449900E0BE9A /* PetTabView.swift */; };
+		6B20B6DD28D9449900E0BE9A /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6C828D9449900E0BE9A /* TabView.swift */; };
 		6B20B6E228D9449900E0BE9A /* HealthJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */; };
 		6B20B6E328D9449900E0BE9A /* NoItemsAddedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */; };
 		6B20B6E428D9449900E0BE9A /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B20B6CF28D9449900E0BE9A /* PetListView.swift */; };
@@ -51,6 +51,7 @@
 		6B6F2E6028DF859000D7363B /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6F2E5F28DF859000D7363B /* PetViewModel.swift */; };
 		6B78C5FA290770600032287D /* CareNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B78C5F9290770600032287D /* CareNotesView.swift */; };
 		6B793C06290AFDEB009C17AB /* PhotoModelFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B793C05290AFDEB009C17AB /* PhotoModelFileManager.swift */; };
+		6B7A201129101303001225FC /* Network+NWPathMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7A201029101303001225FC /* Network+NWPathMonitor.swift */; };
 		6B8AE40228E8DE33006F2039 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B8AE40128E8DE33006F2039 /* GoogleService-Info.plist */; };
 		6B935E9028F1A48E00D06D73 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B935E8F28F1A48E00D06D73 /* LaunchScreenView.swift */; };
 		6B935E9228F1A8C000D06D73 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B935E9128F1A8C000D06D73 /* LaunchScreenManager.swift */; };
@@ -132,7 +133,7 @@
 		6B20B6C428D9449900E0BE9A /* PetDetailRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailRoundedView.swift; sourceTree = "<group>"; };
 		6B20B6C528D9449900E0BE9A /* AddNewItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
 		6B20B6C628D9449900E0BE9A /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
-		6B20B6C828D9449900E0BE9A /* PetTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTabView.swift; sourceTree = "<group>"; };
+		6B20B6C828D9449900E0BE9A /* TabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		6B20B6CD28D9449900E0BE9A /* HealthJournalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthJournalView.swift; sourceTree = "<group>"; };
 		6B20B6CE28D9449900E0BE9A /* NoItemsAddedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoItemsAddedView.swift; sourceTree = "<group>"; };
 		6B20B6CF28D9449900E0BE9A /* PetListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		6B6F2E5F28DF859000D7363B /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		6B78C5F9290770600032287D /* CareNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareNotesView.swift; sourceTree = "<group>"; };
 		6B793C05290AFDEB009C17AB /* PhotoModelFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoModelFileManager.swift; sourceTree = "<group>"; };
+		6B7A201029101303001225FC /* Network+NWPathMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network+NWPathMonitor.swift"; sourceTree = "<group>"; };
 		6B8AE40128E8DE33006F2039 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B935E8D28F19FB400D06D73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B935E8F28F1A48E00D06D73 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -360,7 +362,7 @@
 		6B6F2E5C28DF465C00D7363B /* PetTabSubview */ = {
 			isa = PBXGroup;
 			children = (
-				6B20B6C828D9449900E0BE9A /* PetTabView.swift */,
+				6B20B6C828D9449900E0BE9A /* TabView.swift */,
 				6B2150C928FCCD9C00CF21C4 /* TheCatView.swift */,
 			);
 			path = PetTabSubview;
@@ -416,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2150CF28FCCDCD00CF21C4 /* DownloadAsyncManager.swift */,
+				6B7A201029101303001225FC /* Network+NWPathMonitor.swift */,
 				6B6F2E6128DF880B00D7363B /* Extensions */,
 				6B6F2E8328DF970B00D7363B /* Singletons */,
 				6BFF055028E0A86C0059712A /* IteratorDesignPartner */,
@@ -704,7 +707,7 @@
 				6B935E9228F1A8C000D06D73 /* LaunchScreenManager.swift in Sources */,
 				6BE80806290DF21C00F9BE69 /* CreateNewMessageView.swift in Sources */,
 				6BF4390E290D7D52007D8035 /* FullScreenImageView.swift in Sources */,
-				6B20B6DD28D9449900E0BE9A /* PetTabView.swift in Sources */,
+				6B20B6DD28D9449900E0BE9A /* TabView.swift in Sources */,
 				6B607C6F28E8EA6200C44D55 /* ToDoListRowView.swift in Sources */,
 				6B20B6EA28D9449900E0BE9A /* MedicalRecordView.swift in Sources */,
 				6BE80802290DF20A00F9BE69 /* LoginView.swift in Sources */,
@@ -728,6 +731,7 @@
 				6B1DD4CA2906FFC30078C487 /* FeedTimesView.swift in Sources */,
 				6BFF054928DFBA300059712A /* AddingNameView.swift in Sources */,
 				6BB9A29E29044DF1008945BF /* PetInfoListView.swift in Sources */,
+				6B7A201129101303001225FC /* Network+NWPathMonitor.swift in Sources */,
 				6B56429329073291006D2F85 /* TrainingView.swift in Sources */,
 				6B2150DA28FCCE0000CF21C4 /* Persistence.swift in Sources */,
 				6BE80810290DF24300F9BE69 /* ChatUserModel.swift in Sources */,

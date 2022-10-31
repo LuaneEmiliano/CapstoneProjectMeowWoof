@@ -17,6 +17,7 @@ struct CapstoneProjectMeowWoofApp: App {
     @StateObject var petsViewModel = PetViewModel()
     @StateObject var mainMessageChat = MainMessagesViewModel()
     @State private var description: String?
+    @StateObject var network = NetworkMonitor()
     
     init() {
         UITextView.appearance().backgroundColor = .clear
@@ -27,18 +28,13 @@ struct CapstoneProjectMeowWoofApp: App {
         WindowGroup {
            ZStack {
                PetTabView()
-//               PetInfoListView(pet: nil)
-//                if launchScreenManager.state != .completed {
-//               LaunchScreenView()
-//                }
            }
             .environmentObject(listViewModel)
             .environmentObject(petsViewModel)
             .environmentObject(launchScreenManager)
+            .environmentObject(network)
             .environment(\.managedObjectContext, persistenceController.container.viewContext)
             .environmentObject(mainMessageChat)
                }
             }
         }
-//    }
-//}

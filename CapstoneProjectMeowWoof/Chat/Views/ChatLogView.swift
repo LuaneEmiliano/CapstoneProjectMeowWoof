@@ -126,7 +126,7 @@ struct ChatLogView: View {
 
 struct ChatLogView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMessagesView()
+        MainMessagesView(shouldShowLogOutOptions: .constant(true))
             .previewInterfaceOrientation(.portrait)
     }
 }
@@ -149,7 +149,6 @@ struct MessageView: View {
                 Text(Date(timeIntervalSince1970: TimeInterval(message.timestamp.seconds)).timeText)
                     .frame(width: 75)
             }
-//            .padding(.top, 1)
             .onAppear {
                 offset = CGSize(width: offsetXValue, height: 0)
             }
@@ -167,7 +166,7 @@ struct MessageView: View {
                     .offset(offset)
             }
             .padding(.leading, -3)
-//            .padding(.top, 1)
+           
         }
     }
 }

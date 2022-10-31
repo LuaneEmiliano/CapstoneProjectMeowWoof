@@ -36,18 +36,17 @@ struct SettingsView: View {
                 
                 Button {
                     viewModel.handleSignOut()
-                    
-                    // Show login screen again
                     shouldShowLogOutOptions.toggle()
                 } label: {
                     Text("SIGN OUT")
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 40)
-                        .foregroundColor(.black)
-                        .padding()
-                        .background(Color.healthJournalColor)
+                        .font(.headline)
+                        .frame(maxWidth: . infinity,
+                        minHeight: 45)
+                        .foregroundColor(.blackColor)
+                        .background(Color.universalColor)
                         .cornerRadius(10)
                         .padding()
+                        .padding(.bottom,10)
                 }
                 .navigationTitle("Settings")
             }

@@ -12,11 +12,11 @@ struct RecentMessageModel: Identifiable {
     var id: String { documentId }
     let text, fromId, toId, documentId, email, profileImageUrl: String
     let timestamp: Timestamp
-
+    
     var username: String {
         email.components(separatedBy: "@").first ?? email
     }
-
+    
     init(documentId: String, data: [String: Any]) {
         self.documentId = documentId
         self.text = data[Project.FirebaseConstants.text] as? String ?? ""

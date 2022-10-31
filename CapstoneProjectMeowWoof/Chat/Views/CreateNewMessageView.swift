@@ -52,7 +52,7 @@ struct CreateNewMessageView: View {
                     } label: {
                         Text("Cancel")
                     }
-
+                    
                 }
             }
         }
@@ -62,6 +62,6 @@ struct CreateNewMessageView: View {
 
 struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MainMessagesView()
+        MainMessagesView(shouldShowLogOutOptions: .constant(true))
     }
 }

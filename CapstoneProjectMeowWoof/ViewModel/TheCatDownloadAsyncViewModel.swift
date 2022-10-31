@@ -14,7 +14,7 @@ let apiKey = "4662cc3b-d8f9-4737-8e96-e09b82ed2de9"
 let theCatURL = "https://api.thecatapi.com/v1/breeds?attach_breed=0%27%20--header%20%27x-api-key:%204662cc3b-d8f9-4737-8e96-e09b82ed2de9"
 
 
-
+@MainActor
 class DownloadAsyncViewModel: ObservableObject {
     
     let url = theCatURL

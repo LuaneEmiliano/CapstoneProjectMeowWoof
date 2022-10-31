@@ -18,7 +18,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>lightPurpleColor</string>
+		<string>lightBlueColor</string>
 		<key>UIImageName</key>
 		<string>logo</string>
 		<key>UIImageRespectsSafeAreaInsets</key>

@@ -45,11 +45,9 @@ struct ImagePickerView: View {
         .sheet(isPresented: $isPickerShowing) {
             
         } content: {
-            // image picker
-//            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing)
             ImagePicker(image: $selectedImage)
         }
-
+        
     }
 }
 
