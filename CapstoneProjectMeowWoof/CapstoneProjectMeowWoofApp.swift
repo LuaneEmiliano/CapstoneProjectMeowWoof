@@ -12,8 +12,8 @@ import SDWebImageSwiftUI
 struct CapstoneProjectMeowWoofApp: App {
     @StateObject var listViewModel: ListViewModel = ListViewModel()
     @StateObject var launchScreenManager = LaunchScreenManager()
-    @StateObject var homework08 = DownloadImageAsyncViewModel()
-    let persistenceController = PersistenceController.shared
+
+
     @StateObject var petsViewModel = PetViewModel()
     @StateObject var mainMessageChat = MainMessagesViewModel()
     @State private var description: String?
@@ -27,13 +27,13 @@ struct CapstoneProjectMeowWoofApp: App {
     var body: some Scene {
         WindowGroup {
            ZStack {
-               PetTabView()
+             PetTabView()
+    
            }
             .environmentObject(listViewModel)
             .environmentObject(petsViewModel)
             .environmentObject(launchScreenManager)
             .environmentObject(network)
-            .environment(\.managedObjectContext, persistenceController.container.viewContext)
             .environmentObject(mainMessageChat)
                }
             }

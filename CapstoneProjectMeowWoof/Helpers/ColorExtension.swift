@@ -25,7 +25,7 @@ extension Color {
     public static var blackColor = Color("BlackColor")
     
     public static var detailedColor = Color("DetailedColor")
-
+    
     public static var healthJournalColor = Color("HealthJournalColor")
     
     public static var medicalRecordsColor = Color("MedicalRecordsColor")
@@ -35,4 +35,6 @@ extension Color {
     public static var textfieldColor = Color("TextfieldColor")
     
     public static var lightBlueColor = Color("LightBlueColor")
+    
+    public static var todoListColor = Color("TodoListColor")
 }

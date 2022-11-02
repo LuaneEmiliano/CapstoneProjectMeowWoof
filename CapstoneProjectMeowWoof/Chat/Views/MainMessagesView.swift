@@ -28,14 +28,18 @@ struct MainMessagesView: View {
                 NavigationLink("",isActive: $shouldNavigateToChatLogView) {
                     ChatLogView(vm: chatLogViewModel)
                 }
-            }
-            .overlay(
+                
                 WideStyleActionButton(action: {
                     shouldShowNewMessageScreen.toggle()
                 }, buttonText: "+ New Message")
-                    .padding(.horizontal),
-                alignment: .bottom
-            )
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.petAlbum)
+                    .cornerRadius(20)
+            }
+            .padding()
             .fullScreenCover(isPresented: $vm.isUserCurrentlyLoggedOut) {
                 LoginView(didCompleteLoginProcess: {
                     self.vm.isUserCurrentlyLoggedOut = false
@@ -55,14 +59,13 @@ struct MainMessagesView: View {
             .onAppear {
                 vm.fetchRecentMessages()
             }
+            .navigationViewStyle(.stack)
         }
-        .navigationViewStyle(.stack)
     }
     
     private var customNavigationBar: some View {
         // custom navigation bar
         HStack(spacing: 16.0) {
-            
             WebImage(url: URL(string: vm.chatUser?.profileImageURL ?? ""))
                 .resizable()
                 .scaledToFill()
@@ -71,7 +74,7 @@ struct MainMessagesView: View {
                 .background(
                     RoundedRectangle(cornerRadius: 30)
                         .stroke(lineWidth: 5)
-                        .foregroundColor(.primary)
+                        .foregroundColor(Color.petAlbum)
                 )
                 .shadow(color: .secondary.opacity(0.4), radius: 5, x: 0, y: 0)
             
@@ -92,11 +95,7 @@ struct MainMessagesView: View {
                 }
             }
             Spacer()
-            Image(systemName: "gear")
-                .font(.title2)
-//                .onTapGesture {
-//                    shouldShowLogOutOptions.toggle()
-//                }
+            
         }
         .padding()
         .confirmationDialog("Settings", isPresented: $shouldShowLogOutOptions, titleVisibility: .visible) {

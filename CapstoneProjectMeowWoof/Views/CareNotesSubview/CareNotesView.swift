@@ -23,7 +23,7 @@ struct CareNotesView: View {
         VStack {
             TextEditor(text: $text)
                 .border(Color.gray)
-                .shadow(color: .purple, radius: 1, x: 1, y: 1)
+            
                 .onChange(of: text) { text in
                     self.savedText = text
                 }

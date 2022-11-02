@@ -13,7 +13,7 @@ struct PetDetailView: View {
     
     var body: some View {
         ScrollView {
-            HStack(spacing: 70) {
+            HStack(spacing: 0) {
                 Text("Hello \(pet.name)!")
                     .font(.title)
                     .fontWeight(.semibold)
@@ -21,11 +21,12 @@ struct PetDetailView: View {
                     .padding()
                 Image("Labrador")
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: 120, height: 120)
-                    .cornerRadius(150)
-                    .padding(.trailing, 30)
-                    .padding(.bottom, 20)
+                    .frame(width: 140, height: 150)
+                    .clipShape(Circle())
+                    .scaledToFit()
+                               .shadow(radius: 15)
+                               .overlay(Circle().stroke(Color.universalColor, lineWidth: 3))
+                    
                   }
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color.lightBlueColor)
@@ -49,7 +50,7 @@ struct PetDetailView: View {
                     NavigationLink {
                         MedicalRecordView(pet: pet)
                     } label: {
-                        PetDetailRoundedView(color: "MedicalRecordsColor", text: "Medical Record", icon: "Checklist")
+                        PetDetailRoundedView(color: "MedicalRecordsColor", text: "Medical Record", icon: "MedicalRecord")
                     }
                     NavigationLink {
                         HealthJournalView(pet: pet)

@@ -13,7 +13,6 @@ struct ChatLogView: View {
     
     let offsetXValue: Int = 89
     @ObservedObject var vm: ChatLogViewModel
-    
     @State var offset: CGSize = .zero
     
     var body: some View {
@@ -69,20 +68,12 @@ struct ChatLogView: View {
     
     private var chatBottomBar: some View {
         HStack(spacing: 10) {
-            Button {
-                // TODO: Add image function
-            } label: {
-                Image(systemName: "photo.on.rectangle.angled")
-                    .font(.title)
-                    .foregroundColor(.primary)
-            }
-            
             HStack {
                 TextEditor(text: $vm.chatText)
                     .frame(maxWidth: .infinity, maxHeight: 45)
                     .lineLimit(2)
-                    .foregroundColor(.primary)
-                    .opacity(vm.chatText == vm.placeholderString ? 0.2 : 1.0)
+                    .foregroundColor(Color.universalColor)
+//                    .opacity(vm.chatText == vm.placeholderString ? 0.2 : 1.0)
                     .keyboardType(.webSearch)
                     .onChange(of: vm.chatText, perform: { _ in
                         if !vm.chatText.filter({ $0.isNewline }).isEmpty {
@@ -105,7 +96,7 @@ struct ChatLogView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 30)
                                 .stroke(lineWidth: 1)
-                                .foregroundColor(.primary)
+                                .foregroundColor(Color.primary)
                         )
                         .padding(.trailing, Project.Constants.General.paddingSmall)
                         .opacity((vm.chatText != vm.placeholderString && !vm.chatText.isEmpty) ? 1.0 : 0.0)

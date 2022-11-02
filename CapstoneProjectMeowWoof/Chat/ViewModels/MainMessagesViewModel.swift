@@ -14,6 +14,7 @@ class MainMessagesViewModel: ObservableObject {
     @Published var chatUser: ChatUserModel?
     @Published var isUserCurrentlyLoggedOut = false
     @Published var recentMessages = [RecentMessageModel]()
+    @Published var chatUserID: String = ""
     
     private var firestoreListener: ListenerRegistration?
     
@@ -47,9 +48,6 @@ class MainMessagesViewModel: ObservableObject {
                     if let index = self.recentMessages.firstIndex(where: { $0.documentId == docId }) {
                         self.recentMessages.remove(at: index)
                     }
-//                    if let rm = try? change.document.data(as: RecentMessageModel.self) {
-//                        self.recentMessages.insert(rm, at: 0)
-//                    }
                     self.recentMessages.insert(.init(documentId: docId, data: change.document.data()), at: 0)
                 })
             }
@@ -74,11 +72,37 @@ class MainMessagesViewModel: ObservableObject {
             }
             
             self.chatUser = .init(data: data)
+            
         }
     }
     
     func handleSignOut() {
         isUserCurrentlyLoggedOut.toggle()
         try? FirebaseManager.shared.auth.signOut()
+    }
+    
+    func deleteUserData(uid: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        
+        let reference = FirebaseManager.shared.firestore
+            .collection("users")
+            .document(uid)
+        reference.delete { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(true))
+            }
+        }
+    }
+    func deleteUser(completion: @escaping (Result<Bool, Error>) -> Void) {
+        if let user = Auth.auth().currentUser {
+            user.delete { error in
+                if let error = error {
+                    completion(.failure(error))
+                } else {
+                    completion(.success(true))
+                }
+            }
+        }
     }
 }

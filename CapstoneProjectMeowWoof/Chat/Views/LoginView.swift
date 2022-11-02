@@ -15,6 +15,7 @@ struct LoginView: View {
     @State private var password = ""
     @State private var image: UIImage?
     @State private var loginStatusMessage = ""
+    @EnvironmentObject var viewModel: MainMessagesViewModel
     
     let didCompleteLoginProcess: () -> ()
     
@@ -139,6 +140,10 @@ extension LoginView {
             print("Successfully logged in as user: \(result?.user.uid ?? "")")
             
             self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+            
+            if let uid = result?.user.uid {
+                viewModel.chatUserID = uid
+            }
             
             self.didCompleteLoginProcess()
         }
