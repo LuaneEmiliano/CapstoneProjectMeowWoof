@@ -50,7 +50,7 @@ struct PetFavoritesListView: View {
                         favoriteActivity: [activityTextField])
                 }
                 viewModel.savePets()
-                nextView.toggle()
+                UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
             } label: {
                 Text("Save".uppercased())
                     .font(.headline)

@@ -21,7 +21,7 @@ struct PetGenderRowView: View {
                 .frame(width: 55, height: 55)
                 .padding()
                 .background(Circle())
-                .foregroundColor(petGenderOptions == text.lowercased() ? Color(icon) : Color.gray.opacity(0.3))
+                .foregroundColor(petGenderOptions == text.lowercased() ? Color(icon) : Color.universalColor.opacity(0.3))
             Text(text)
                 .font(.title3)
                 .fontWeight(.regular)

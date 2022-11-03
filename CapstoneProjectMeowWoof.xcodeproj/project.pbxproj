@@ -243,7 +243,6 @@
 				6B6F2E5C28DF465C00D7363B /* TabView */,
 				6B935E8E28F1A47000D06D73 /* LauchScreenSubView */,
 				6B6F2E5928DF453B00D7363B /* HealthJournal+MedicalRecord */,
-				6BF19F052910A7DE0008FB8B /* ToDoList */,
 				6BE807FC290DF1C400F9BE69 /* Chat */,
 				6B20B6C028D9449900E0BE9A /* Views */,
 				6B7F15C928F9F4A300C4140F /* Utilities */,
@@ -297,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				6B20B6C828D9449900E0BE9A /* TabView.swift */,
+				6BF19F052910A7DE0008FB8B /* ToDoList */,
 			);
 			path = TabView;
 			sourceTree = "<group>";

@@ -16,9 +16,10 @@ struct MainMessagesView: View {
     @State var shouldNavigateToChatLogView = false
     
     @State var chatUser: ChatUserModel? = nil
-    
+    @EnvironmentObject var petViewModel: PetViewModel
     @ObservedObject var vm = MainMessagesViewModel()
     var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+    @State var showsAddPet: Bool = false
     
     var body: some View {
         NavigationView {
@@ -55,6 +56,12 @@ struct MainMessagesView: View {
                     self.chatLogViewModel.chatUser = user
                     self.chatLogViewModel.fetchMessages()
                 })
+            }
+            .onChange(of: vm.isUserCurrentlyLoggedOut) { _ in
+                if petViewModel.pets.isEmpty {
+                    showsAddPet = true
+                }
+                
             }
             .onAppear {
                 vm.fetchRecentMessages()

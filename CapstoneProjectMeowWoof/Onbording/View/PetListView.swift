@@ -10,7 +10,8 @@ import SwiftUI
 struct AnimalListView: View {
     
     @EnvironmentObject var viewModel: PetViewModel
-    //    var petList: [Pet] = listOfPets
+    @State var AddNameView: Bool = false
+   
     
     var body: some View {
         NavigationView {
@@ -36,20 +37,23 @@ struct AnimalListView: View {
                 .navigationBarItems(
                     trailing:
                         
-                        NavigationLink(destination: {
-                            AddingNameView()
-                        }, label: {
+                        Button {
+                            AddNameView.toggle()
+                        } label: {
                             Image(systemName: "plus.circle")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(Color.detailedColor)
                                 .padding(5)
                         })
-                )
+                .fullScreenCover(isPresented: $AddNameView) {
+                    AddingNameView()
+                }
             }
         }
         .navigationViewStyle(.stack)
         .navigationBarHidden(true)
+        
     }
     
     func determineColor(pet: Pet) -> String {

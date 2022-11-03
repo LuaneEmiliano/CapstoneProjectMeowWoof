@@ -48,7 +48,7 @@ struct PetTypeView: View {
                     Button {
                         petOptions = list[2]
                     } label: {
-                        PetTypeRowView(icon: "HealthJournalColor", text: "Others", image: "OtherAnimal", petOptions: $petOptions)
+                        PetTypeRowView(icon: "HealthJournalColor", text: "Other", image: "OtherAnimal", petOptions: $petOptions)
                     }
                 }
             }

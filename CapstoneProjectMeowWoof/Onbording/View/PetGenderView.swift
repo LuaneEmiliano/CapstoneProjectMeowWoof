@@ -52,13 +52,6 @@ struct PetGenderView: View {
             .padding(.top )
             .accessibilityIdentifier("SaveButton")
             
-            Button {
-                
-            } label: {
-                Text("Skip")
-                    .foregroundColor(.primary)
-            }
-            .padding(.top )
         }
         .padding(.all)
         .fullScreenCover(isPresented: $nextView) {
@@ -70,7 +63,8 @@ struct PetGenderView: View {
 struct PetGenderView_Previews: PreviewProvider {
     static var previews: some View {
         PetGenderView(pet: nil)
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
+.previewInterfaceOrientation(.portraitUpsideDown)
         
     }
 }

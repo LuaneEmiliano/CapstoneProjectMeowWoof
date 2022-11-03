@@ -23,7 +23,7 @@ struct PetTypeRowView: View {
                 .padding()
                 .background(Circle())
                 .foregroundColor(petOptions == text.lowercased() ? Color(icon) : Color.textfieldColor.opacity(0.3))
-                    .background(Color.universalColor)
+              
             Text(text)
                 .font(.title3)
                 .fontWeight(.regular)

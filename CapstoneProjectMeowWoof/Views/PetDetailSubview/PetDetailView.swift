@@ -10,10 +10,12 @@ import SwiftUI
 struct PetDetailView: View {
     
     var pet: Pet
+    @EnvironmentObject var viewModel: PetViewModel
+    @State var showAlert: Bool = false
     
     var body: some View {
         ScrollView {
-            HStack(spacing: 0) {
+            HStack(spacing: 30) {
                 Text("Hello \(pet.name)!")
                     .font(.title)
                     .fontWeight(.semibold)
@@ -25,7 +27,7 @@ struct PetDetailView: View {
                     .clipShape(Circle())
                     .scaledToFit()
                                .shadow(radius: 15)
-                               .overlay(Circle().stroke(Color.universalColor, lineWidth: 3))
+                               .overlay(Circle().stroke(Color.petAlbum, lineWidth: 3))
                     
                   }
             RoundedRectangle(cornerRadius: 20)
@@ -68,6 +70,35 @@ struct PetDetailView: View {
                         PetDetailRoundedView(color: "CareNotes", text: "Care Notes", icon: "Info")
                     }
                 }
+            }
+        }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    showAlert.toggle()
+                    
+                } label: {
+                    Text("Delete Pet")
+                        .padding()
+                        .background(Color.petAlbum)
+                        .foregroundColor(Color.buttonStrokeColor)
+                        .cornerRadius(15)
+                }
+            }
+        }
+        .alert("Are you sure you want to delete this pet?", isPresented: $showAlert) {
+            
+            Button(role: .cancel) {
+                showAlert = false
+            } label: {
+                Text("Cancel")
+            }
+            
+            Button(role: .destructive) {
+                viewModel.deletePet(pet: pet)
+                viewModel.savePets()
+            } label: {
+                Text("Delete")
             }
         }
     }

@@ -229,4 +229,13 @@ class PetViewModel: ObservableObject {
             UserDefaults.standard.set(encodedData, forKey: petKey)
         }
     }
+    
+    func deletePet(pet: Pet) {
+        let petIndex = pets.firstIndex(where: { $0.id == pet.id })
+        guard let petIndex = petIndex else {
+            return
+        }
+
+        pets.remove(at: petIndex)
+    }
 }

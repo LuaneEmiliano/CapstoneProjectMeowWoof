@@ -13,6 +13,7 @@ struct AddingNameView: View {
     @State var pet: Pet? = nil
     @State var textFieldText: String = ""
     @State var nextView: Bool = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView{
@@ -47,6 +48,20 @@ struct AddingNameView: View {
             }
             .fullScreenCover(isPresented: $nextView) {
                 PetTypeView(pet: pet)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        HStack {
+                            Image(systemName: "chevron.left")
+                            Text("Back")
+                        }
+                    }
+
+                }
+                
             }
         }
     }
