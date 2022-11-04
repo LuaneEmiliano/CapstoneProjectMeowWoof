@@ -1,6 +1,6 @@
 //
 //  RecentMessageModel.swift
-//  Trip Planner Capstone
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 10/4/22.
 //

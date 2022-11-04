@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Trip Planner Capstone
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 8/18/22.
 //

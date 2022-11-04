@@ -1,6 +1,6 @@
 //
 //  ImagePickerView.swift
-//  Trip Planner Capstone
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 10/1/22.
 //
@@ -53,6 +53,6 @@ struct ImagePickerView: View {
 
 struct ImagePickerView_Previews: PreviewProvider {
     static var previews: some View {
-        ImagePickerView(selectedImage: .constant(nil), id: "test", text: "Select a Main Trip Photo", iconImage: "person.fill")
+        ImagePickerView(selectedImage: .constant(nil), id: "test", text: "Select a Main  Photo", iconImage: "person.fill")
     }
 }

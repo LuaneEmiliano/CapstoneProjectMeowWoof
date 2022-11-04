@@ -1,6 +1,6 @@
 //
 //  Network+NWPathMonitor.swift
-//  Trip Planner Capstone
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 10/29/22.
 //

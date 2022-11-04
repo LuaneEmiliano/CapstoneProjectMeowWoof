@@ -1,12 +1,35 @@
 //
 //  LoginView.swift
-//  Trip Planner Capstone
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 10/1/22.
 //
 
 import SwiftUI
 import Firebase
+
+struct UITextFieldViewRepresentable:
+    UIViewRepresentable {
+    
+
+    func makeUIView(context: Context) -> some UIView {
+        return getTextField()
+    }
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+    private func getTextField() -> UITextField {
+        let textfield = UITextField(frame: .zero)
+        let placeholder = NSAttributedString(
+            string: "Email",
+        attributes: [
+            .foregroundColor: UIColor.gray
+        ])
+        textfield.attributedPlaceholder = placeholder
+        return textfield
+    }
+    
+}
 
 struct LoginView: View {
     
@@ -16,7 +39,6 @@ struct LoginView: View {
     @State private var image: UIImage?
     @State private var loginStatusMessage = ""
     @EnvironmentObject var viewModel: MainMessagesViewModel
-    
     let didCompleteLoginProcess: () -> ()
     
     var body: some View {
@@ -63,7 +85,8 @@ struct LoginView: View {
                             ImagePickerView(selectedImage: $image, id: "", text: "Add Profile Image", iconImage: "person.fill")
                         }
                         
-                        TextField("Email", text: $email)
+//                        TextField("Email", text: $email)
+                        UITextFieldViewRepresentable()
                             .foregroundColor(.universalColor)
                             .keyboardType(.emailAddress)
                             .autocapitalization(.none)
