@@ -1,6 +1,6 @@
 //
 //  ModelFile.swift
-//  MeowWoofPetDiary
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 8/23/22.
 //

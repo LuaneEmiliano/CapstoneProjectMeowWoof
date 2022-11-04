@@ -1,6 +1,6 @@
 //
 //  MedicalRecordView.swift
-//  MeowWoofPetDiary
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 9/17/22.
 //

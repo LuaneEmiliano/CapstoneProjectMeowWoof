@@ -1,6 +1,6 @@
 //
 //  AnimalListView.swift
-//  MeowWoofPetDiary
+//  CapstoneProjectMeowWoof
 //
 //  Created by luane Niejelski on 9/18/22.
 //
