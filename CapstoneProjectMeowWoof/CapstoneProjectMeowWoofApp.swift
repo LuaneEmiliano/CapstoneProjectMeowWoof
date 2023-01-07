@@ -15,7 +15,7 @@ struct CapstoneProjectMeowWoofApp: App {
 
 
     @StateObject var petsViewModel = PetViewModel()
-    @StateObject var mainMessageChat = MainMessagesViewModel()
+//    @StateObject var mainMessageChat = MainMessagesViewModel()
     @State private var description: String?
     @StateObject var network = NetworkMonitor()
     
@@ -34,7 +34,7 @@ struct CapstoneProjectMeowWoofApp: App {
             .environmentObject(petsViewModel)
             .environmentObject(launchScreenManager)
             .environmentObject(network)
-            .environmentObject(mainMessageChat)
+//            .environmentObject(mainMessageChat)
                }
             }
         }

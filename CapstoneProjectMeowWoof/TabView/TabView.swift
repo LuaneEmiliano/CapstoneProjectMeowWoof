@@ -31,18 +31,18 @@ struct PetTabView: View {
                     Text("Reminder")
                 }
                 .tag(1)
-            MainMessagesView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
-                .tabItem {
-                    Image(systemName: "message.fill")
-                    Text("Chat")
-                }
-                .tag(2)
-            SettingsView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
-                .tabItem {
-                    Image(systemName: "ellipsis.circle.fill")
-                    Text("More")
-                }
-                .tag(4)
+//            MainMessagesView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
+//                .tabItem {
+//                    Image(systemName: "message.fill")
+//                    Text("Chat")
+//                }
+//                .tag(2)
+//            SettingsView(shouldShowLogOutOptions: $shouldShowLogOutOptions)
+//                .tabItem {
+//                    Image(systemName: "ellipsis.circle.fill")
+//                    Text("More")
+//                }
+//                .tag(4)
             
         }
         .onAppear {

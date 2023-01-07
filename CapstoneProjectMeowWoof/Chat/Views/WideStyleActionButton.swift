@@ -1,25 +1,25 @@
+////
+////  WideStyleActionButton.swift
+////  CapstoneProjectMeowWoof
+////
+////  Created by luane Niejelski on 10/29/22.
+////
 //
-//  WideStyleActionButton.swift
-//  CapstoneProjectMeowWoof
+//import SwiftUI
 //
-//  Created by luane Niejelski on 10/29/22.
+//struct WideStyleActionButton: View {
+//    
+//    let action: () -> Void
+//    let buttonText: String
+//    
+//    var body: some View {
+//        Button {
+//            action()
+//        } label: {
+//            Text(buttonText)
+//        }
+//        
+//    }
+//}
 //
-
-import SwiftUI
-
-struct WideStyleActionButton: View {
-    
-    let action: () -> Void
-    let buttonText: String
-    
-    var body: some View {
-        Button {
-            action()
-        } label: {
-            Text(buttonText)
-        }
-        
-    }
-}
-
-
+//
